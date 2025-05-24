@@ -5,71 +5,72 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>WDD 131 – Dynamic Web Fundamentals – Omar Meza</title>
 
-  <!-- description must include course string + your name + keywords -->
-  <meta name="description"
-        content="WDD 131 – Dynamic Web Fundamentals | Home page of Omar Meza – web development, BYU-Pathway Worldwide assignments, portfolio">
+  <meta name="description" content="WDD 131 – Dynamic Web Fundamentals | Home page of Omar Meza – web development, BYU‑Pathway Worldwide assignments, portfolio">
   <meta name="author" content="Omar Meza">
 
-  <!-- Google Fonts -->
+  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 
-  <!-- CSS -->
   <link rel="stylesheet" href="styles/base.css">
-
-  <!-- JS (deferred) -->
   <script src="scripts/getdates.js" defer></script>
 </head>
-
 <body>
+  <!-- Azul oscuro -->
   <header>
     <h1>WDD 131: Dynamic Web Fundamentals – <span class="highlight">Omar Meza</span></h1>
-    <nav>
-      <a href="https://www.linkedin.com/in/YOUR-LINKEDIN" target="_blank">LinkedIn</a>
-      <a href="https://byupw.instructure.com/" target="_blank">Canvas</a>
-      <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/3?lang=eng#p7" target="_blank">Scripture</a>
-      <a href="final-project/" target="_blank">Final Project</a>
-    </nav>
   </header>
 
+  <!-- Barra gris -->
+  <nav class="topnav">
+    <a href="https://www.linkedin.com/in/YOUR-LINKEDIN" target="_blank">LinkedIn</a>
+    <a href="https://byupw.instructure.com/"            target="_blank">Canvas</a>
+    <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/3?lang=eng#p7" target="_blank">Scripture</a>
+    <a href="final-project/" target="_blank">Final&nbsp;Project</a>
+  </nav>
+
   <main>
-    <!-- CARD 1 -->
-    <section class="card">
+    <!-- Izquierda (70 %) -->
+    <section class="card about">
       <h2>About&nbsp;Me</h2>
-      <img src="images/profile.webp" alt="Portrait of Omar Meza" width="200" height="260" loading="lazy" decoding="async">
+
+      <img src="images/profile.webp" alt="Portrait of Omar Meza" loading="lazy" decoding="async">
+
       <p>
-        I’m Omar, a quantum-computing enthusiast from Peru. When I’m not debugging
-        qubits or grinding at the gym, I study full-stack web dev and help my LDS
+        I’m Omar, a quantum‑computing enthusiast from Peru. When I’m not debugging
+        qubits or grinding at the gym, I study full‑stack web dev and help my LDS
         community. I love merging science, spirituality, and good UI design.
       </p>
-    </section>
 
-    <!-- CARD 2 -->
-    <section class="card">
-      <h2>Lima, Peru</h2>
-      <img src="images/flag.webp" alt="Official flag of Peru" width="200" height="133" loading="lazy" decoding="async">
+      <h3 class="subhead">Lima, Perú</h3>
+
+      <figure class="flag">
+        <img src="images/flag.webp" alt="Official flag of Peru" loading="lazy" decoding="async">
+        <figcaption>Official Flag of Peru</figcaption>
+      </figure>
+
       <p>
-        Lima lies on the Pacific coast and mixes colonial history with
-        cutting-edge gastronomy. Ceviche, ancient ruins, and vibrant tech
-        meet-ups make the city unique.
+        Lima lies on the Pacific coast and blends colonial history with
+        cutting‑edge gastronomy. Ceviche, ancient ruins and vibrant tech meet‑ups
+        make the city unique.
       </p>
     </section>
 
-    <!-- SIDEBAR -->
+    <!-- Derecha (30 %) -->
     <aside class="resources card">
       <h2>Web Dev Resources</h2>
       <ul>
-        <li><a href="https://developer.mozilla.org">MDN Docs</a></li>
-        <li><a href="https://smashingmagazine.com">Smashing Magazine</a></li>
-        <li><a href="https://css-tricks.com">CSS-Tricks</a></li>
-        <li><a href="https://w3schools.com">W3 Schools</a></li>
-        <li><a href="https://dev.to">Dev.to Community</a></li>
+        <li><a href="https://developer.mozilla.org">MDN Docs</a></li>
+        <li><a href="https://smashingmagazine.com">Smashing Magazine</a></li>
+        <li><a href="https://css-tricks.com">CSS‑Tricks</a></li>
+        <li><a href="https://w3schools.com">W3 Schools</a></li>
+        <li><a href="https://dev.to">Dev.to Community</a></li>
       </ul>
     </aside>
   </main>
 
   <footer>
     <p>&copy; <span id="currentyear"></span> Omar Meza 🌸 Peru</p>
-    <p id="lastModified"></p>
+    <p id="lastModified" class="mod-date"></p>
   </footer>
 </body>
 </html>
