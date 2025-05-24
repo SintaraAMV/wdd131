@@ -71,14 +71,19 @@ main{
 }
 
 /* ─── ABOUT CARD LAYOUT ─────────────────────── */
-.about{
-  display:grid;gap:1rem;
-  grid-template-columns:160px 1fr;
-  align-items:start;
+/* imagen a 160 px de ancho, alto auto */
+.about img{
+  width:160px;
+  height:auto;
+  border-radius:var(--radius);
+  object-fit:cover;
+  aspect-ratio:3/2;
 }
-.about img{width:100%;border-radius:var(--radius);object-fit:cover;aspect-ratio:3/2}
-@media(max-width:600px){.about{grid-template-columns:1fr;text-align:center}}
 
+/* en móviles se apila; se hereda el text-align:center ya existente */
+@media(max-width:600px){
+  .about{ grid-template-columns:1fr; }
+}
 /* subtítulo con línea */
 .subhead{
   grid-column:1/-1;text-align:center;margin:1rem 0 .4rem;font-size:1.05rem;
