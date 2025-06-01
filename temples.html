@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Temple Album | WDD 131</title>
+
+  <!-- Meta description and author (good SEO practices) -->
+  <meta name="description" content="WDD 131 – Temple Album: Responsive picture album using CSS Grid, Flexbox, and JavaScript." />
+  <meta name="author" content="Your Name" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+
+  <!-- CSS (mobile-first) -->
+  <link rel="stylesheet" href="styles/temples.css" />
+  <!-- CSS adjustments for larger screens -->
+  <link rel="stylesheet" href="styles/temples-large.css" />
+
+  <!-- JavaScript (deferred) -->
+  <script src="scripts/temples.js" defer></script>
+</head>
+
+<body>
+  <!-- ================================
+       HEADER: SITE TITLE + NAVIGATION
+       ================================ -->
+  <header>
+    <h1 class="site-title">Temple Album</h1>
+
+    <!-- Hamburger button for mobile menu toggle -->
+    <button
+      id="menuToggle"
+      class="hamburger"
+      aria-label="Open menu"
+      aria-expanded="false"
+    >
+      ☰
+    </button>
+
+    <!-- Navigation menu (hidden by default on mobile) -->
+    <nav id="siteNav" class="nav-menu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="old.html">Old</a></li>
+        <li><a href="new.html">New</a></li>
+        <li><a href="large.html">Large</a></li>
+        <li><a href="small.html">Small</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ================================
+       MAIN: PICTURE GALLERY
+       ================================ -->
+  <main>
+    <h2>Our Favorite Temples</h2>
+
+    <div class="gallery">
+      <!-- Nine <figure> elements, each with an <img> + <figcaption> -->
+      <figure>
+        <img
+          src="images/temple1.webp"
+          alt="Temple 1"
+          loading="lazy"
+        />
+        <figcaption>Temple 1</figcaption>
+      </figure>
+
+      <figure>
+        <img
+          src="images/temple2.webp"
+          alt="Temple 2"
+          loading="lazy"
+        />
+        <figcaption>Temple 2</figcaption>
+      </figure>
+
+      <figure>
+        <img
+          src="images/temple3.webp"
+          alt="Temple 3"
+          loading="lazy"
+        />
+        <figcaption>Temple 3</figcaption>
+      </figure>
+
+      <figure>
+        <img
+          src="images/temple4.webp"
+          alt="Temple 4"
+          loading="lazy"
+        />
+        <figcaption>Temple 4</figcaption>
+      </figure>
+
+      <figure>
+        <img
+          src="images/temple5.webp"
+          alt="Temple 5"
+          loading="lazy"
+        />
+        <figcaption>Temple 5</figcaption>
+      </figure>
+
+      <figure>
+        <img
+          src="images/temple6.webp"
+          alt="Temple 6"
+          loading="lazy"
+        />
+        <figcaption>Temple 6</figcaption>
+      </figure>
+
+      <figure>
+        <img
+          src="images/temple7.webp"
+          alt="Temple 7"
+          loading="lazy"
+        />
+        <figcaption>Temple 7</figcaption>
+      </figure>
+
+      <figure>
+        <img
+          src="images/temple8.webp"
+          alt="Temple 8"
+          loading="lazy"
+        />
+        <figcaption>Temple 8</figcaption>
+      </figure>
+
+      <figure>
+        <img
+          src="images/temple9.webp"
+          alt="Temple 9"
+          loading="lazy"
+        />
+        <figcaption>Temple 9</figcaption>
+      </figure>
+      <!-- End of nine figures -->
+    </div>
+  </main>
+
+  <!-- ================================
+       FOOTER: CURRENT YEAR + LAST MODIFIED
+       ================================ -->
+  <footer>
+    <p>&copy; <span id="currentYear"></span> Your Name. All rights reserved.</p>
+    <p id="lastModified">Last Modification: </p>
+  </footer>
+</body>
+</html>

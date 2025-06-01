@@ -1,0 +1,54 @@
+/* ===============================
+   MEDIA QUERY: ≥ 600px (Tablet / Desktop)
+   =============================== */
+@media (min-width: 600px) {
+  /* Hide hamburger in desktop */
+  .hamburger {
+    display: none;
+  }
+
+  /* Show nav horizontally */
+  .nav-menu {
+    display: flex;
+  }
+  .nav-menu ul {
+    display: flex;
+    gap: 1rem;
+  }
+  .nav-menu li + li {
+    margin-top: 0;
+  }
+
+  /* Increase site title size */
+  .site-title {
+    font-size: 1.75rem;
+  }
+
+  /* Gallery: 3 columns instead of 1 */
+  .gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ===============================
+   MEDIA QUERY: ≥ 900px (Large Desktop)
+   =============================== */
+@media (min-width: 900px) {
+  main {
+    max-width: 1000px;
+    margin: 1.5rem auto;
+  }
+
+  .gallery {
+    gap: 1.5rem;
+  }
+
+  /* Hover effect on figure (slight “zoom”) */
+  .gallery figure {
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .gallery figure:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+}
