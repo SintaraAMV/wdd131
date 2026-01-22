@@ -19,13 +19,16 @@
 
 body{
   margin: 0;
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-family: Roboto, system-ui, -apple-system, Segoe UI, Arial, sans-serif;
   line-height: 1.5;
   color: var(--text);
   background: var(--bg);
 }
 
-h1, h2{ margin: 0 0 .75rem; }
+h1, h2{
+  font-family: Merriweather, serif;
+  margin: 0 0 .75rem;
+}
 
 img{
   max-width: 100%;
@@ -34,7 +37,7 @@ img{
   border-radius: 12px;
 }
 
-/* Contenedor principal (solo para el contenido, no para el fondo del header/footer) */
+/* Container for content (keeps header/footer backgrounds full width) */
 header .header-inner,
 main,
 footer{
@@ -43,7 +46,7 @@ footer{
   padding: 1rem;
 }
 
-/* Header/Footer a ancho completo */
+/* Header / Footer full width */
 .site-header{
   background: var(--brand);
   color: var(--brand-ink);
@@ -54,7 +57,7 @@ footer{
   color: var(--brand-ink);
 }
 
-/* Requisito del curso */
+/* Required by course instructions */
 #course-title{
   display: block;
   font-weight: 700;
@@ -72,10 +75,11 @@ footer{
   .header-inner{
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
   }
 }
 
-/* Nav */
+/* Nav (flex) */
 .site-nav{
   display: flex;
   flex-wrap: wrap;
@@ -98,10 +102,10 @@ footer{
   outline-offset: 2px;
 }
 
-/* Links dentro del contenido */
+/* Links inside main content */
 main a{ color: var(--link); }
 
-/* Grid de cards */
+/* Cards grid */
 .cards{
   display: grid;
   grid-template-columns: 1fr;
@@ -120,7 +124,7 @@ main a{ color: var(--link); }
   padding: 1rem;
 }
 
-/* About */
+/* About layout */
 .about{
   display: flex;
   gap: 1rem;
@@ -138,4 +142,5 @@ main a{ color: var(--link); }
   margin: .5rem 0 0;
   color: var(--muted);
 }
+
 
