@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="WDD 131 course home page for SU_NOMBRE." />
+  <meta name="author" content="SU_NOMBRE" />
+  <title>WDD 131 - Dynamic Web Fundamentals - Omar Lizandro Meza Ramirez</title>
+
+  <link rel="stylesheet" href="styles/base.css" />
+  <script src="scripts/getdates.js" defer></script>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <span id="course-title">WDD 131 - Dynamic Web Fundamentals</span>
+
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://byui.instructure.com/" target="_blank" rel="noopener">Canvas</a>
+        <a href="https://www.churchofjesuschrist.org/study/scriptures" target="_blank" rel="noopener">Scriptures</a>
+        <a href="#" target="_blank" rel="noopener">Final Project</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page">
+    <h1>Omar Lizandro Meza Ramirez</h1>
+
+    <section class="cards">
+      <section class="card">
+        <h2>Learning Activities</h2>
+        <ul>
+          <li><a href="week01/basic-layout.html">Week 01 - Basic Layout</a></li>
+          <li><a href="temples.html">Week 02 - Temple Album</a></li>
+          <li><a href="#">Week 03</a></li>
+          <li><a href="#">Week 04</a></li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>About Me</h2>
+
+        <div class="about">
+          <img src="images/profile.jpg" alt="Portrait of SU_NOMBRE" width="320" height="320" loading="lazy">
+          <div class="about-text">
+            <p>
+              My name is Omar Lizandro Meza Ramirez. I am currently based in Lima, Perú.
+              This page is my course hub for WDD 131 projects and assignments.
+            </p>
+          </div>
+        </div>
+
+        <div class="location">
+          <img src="images/location.jpg" alt="A representative image of SU_CIUDAD, SU_PAIS" width="640" height="360" loading="lazy">
+          <p class="caption">Lima, Perú</p>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="currentyear"></span> Omar Lizandro Meza Ramirez | Perú</p>
+    <p id="lastModified"></p>
+  </footer>
+</body>
+</html>
