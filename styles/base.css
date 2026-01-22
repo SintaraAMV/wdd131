@@ -1,119 +1,141 @@
+:root{
+  --bg: #f5f7fb;
+  --surface: #ffffff;
+  --text: #111827;
+  --muted: #4b5563;
+
+  --brand: #1f4a63;
+  --brand-dark: #16384b;
+  --brand-ink: #ffffff;
+
+  --border: #e5e7eb;
+  --link: #0b3aa4;
+  --link-hover-bg: rgba(255,255,255,.12);
+}
+
 *,
 *::before,
 *::after { box-sizing: border-box; }
 
-body {
+body{
   margin: 0;
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   line-height: 1.5;
-  color: #111;
-  background: #fff;
+  color: var(--text);
+  background: var(--bg);
 }
 
-img {
+h1, h2{ margin: 0 0 .75rem; }
+
+img{
   max-width: 100%;
   height: auto;
   display: block;
+  border-radius: 12px;
 }
 
-header, main, footer {
+/* Contenedor principal (solo para el contenido, no para el fondo del header/footer) */
+header .header-inner,
+main,
+footer{
   max-width: 980px;
   margin: 0 auto;
   padding: 1rem;
 }
 
-header { border-bottom: 1px solid #e5e7eb; }
-footer { border-top: 1px solid #e5e7eb; }
-
-nav {
-  display: flex;
-  flex-wrap: wrap;
-  gap: .5rem;
+/* Header/Footer a ancho completo */
+.site-header{
+  background: var(--brand);
+  color: var(--brand-ink);
 }
 
-nav a {
-  color: #0b3aa4;
-  text-decoration: none;
-  padding: .4rem .6rem;
-  border-radius: .5rem;
+.site-footer{
+  background: var(--brand-dark);
+  color: var(--brand-ink);
 }
 
-nav a:hover,
-nav a:focus-visible {
-  background: rgba(11, 58, 164, 0.12);
-  text-decoration: underline;
-  text-underline-offset: 3px;
+/* Requisito del curso */
+#course-title{
+  display: block;
+  font-weight: 700;
 }
 
-nav a:focus-visible {
-  outline: 2px solid #0b3aa4;
-  outline-offset: 2px;
-}
-/* Layout general */
-.page h1 { margin-top: 1.5rem; }
-
-.cards {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1rem;
-}
-
-@media (min-width: 800px) {
-  .cards { grid-template-columns: 2fr 1fr; }
-}
-
-
-.card {
-  border: 1px solid #e5e7eb;
-  border-radius: 12px;
-  padding: 1rem;
-  background: #fff;
-}
-
-/* 2 columnas en pantallas medianas/grandes */
-@media (min-width: 800px) {
-  .cards { grid-template-columns: 1fr 1fr; align-items: start; }
-}
-
-/* About: imagen + texto alineados */
-.about {
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.about img {
-  width: 200px;        /* controla el tamaño (evita la foto gigante) */
-  height: 200px;
-  object-fit: cover;
-  border-radius: 12px;
-}
-
-/* Location */
-.location img {
-  border-radius: 12px;
-}
-
-.caption {
-  margin: .5rem 0 0;
-  color: #333;
-}
-
-/* Header más sólido (si ya tiene .header-inner) */
-.header-inner {
+/* Header layout */
+.header-inner{
   display: flex;
   flex-direction: column;
   gap: .75rem;
   align-items: center;
 }
 
-@media (min-width: 800px) {
-  .header-inner {
+@media (min-width: 800px){
+  .header-inner{
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
   }
 }
-body { font-family: Roboto, system-ui, -apple-system, Segoe UI, Arial, sans-serif; }
-h1, h2 { font-family: Merriweather, serif; }
+
+/* Nav */
+.site-nav{
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+}
+
+.site-nav a{
+  color: var(--brand-ink);
+  text-decoration: none;
+  padding: .4rem .6rem;
+  border-radius: .5rem;
+}
+
+.site-nav a:hover,
+.site-nav a:focus-visible{
+  background: var(--link-hover-bg);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  outline: 2px solid rgba(255,255,255,.65);
+  outline-offset: 2px;
+}
+
+/* Links dentro del contenido */
+main a{ color: var(--link); }
+
+/* Grid de cards */
+.cards{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+@media (min-width: 800px){
+  .cards{ grid-template-columns: 2fr 1fr; align-items: start; }
+}
+
+.card{
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1rem;
+}
+
+/* About */
+.about{
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.about img{
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.caption{
+  margin: .5rem 0 0;
+  color: var(--muted);
+}
+
