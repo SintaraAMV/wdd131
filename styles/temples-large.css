@@ -1,0 +1,19 @@
+@media (min-width: 800px){
+
+  /* En desktop: ocultar hamburger y mostrar nav horizontal */
+  .menu-button{
+    display: none;
+  }
+
+  .site-nav{
+    display: flex !important;
+    width: auto;
+    flex-direction: row;
+    gap: .5rem;
+  }
+
+  /* Galería: 3 columnas (puede ajustar a 2 si prefiere) */
+  .gallery{
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="WDD 131 Temple Album" />
+  <meta name="author" content="Omar Lizandro Meza Ramirez" />
+  <title>WDD 131 - Temple Album</title>
+
+  <!-- Google Fonts (reutilice las mismas si desea) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Merriweather:wght@700&display=swap" rel="stylesheet">
+
+  <!-- CSS: mobile first + large -->
+  <link rel="stylesheet" href="styles/temples.css">
+  <link rel="stylesheet" href="styles/temples-large.css">
+
+  <!-- JS: footer (reutiliza su script) + menú -->
+  <script src="scripts/getdates.js" defer></script>
+  <script src="scripts/temples.js" defer></script>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <span class="album-title">Temple Album</span>
+
+      <!-- Hamburger (solo móvil) -->
+      <button
+        id="menuButton"
+        class="menu-button"
+        type="button"
+        aria-label="Open menu"
+        aria-expanded="false"
+        aria-controls="primaryNav"
+      >☰</button>
+
+      <!-- Nav (links requeridos) -->
+      <nav id="primaryNav" class="site-nav" aria-label="Primary navigation">
+        <a href="temples.html">Home</a>
+        <a href="temples.html?filter=old">Old</a>
+        <a href="temples.html?filter=new">New</a>
+        <a href="temples.html?filter=large">Large</a>
+        <a href="temples.html?filter=small">Small</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page">
+    <h1 id="pageTitle">Home</h1>
+
+    <!-- Galería (mínimo 9 figuras) -->
+    <section class="gallery" aria-label="Temple gallery">
+      <!-- Reemplace temple-placeholder.jpg por fotos reales optimizadas -->
+      <figure>
+        <img src="images/temple-placeholder.jpg" alt="Temple placeholder image" loading="lazy" width="960" height="540">
+        <figcaption>Temple 1</figcaption>
+      </figure>
+      <figure>
+        <img src="images/temple-placeholder.jpg" alt="Temple placeholder image" loading="lazy" width="960" height="540">
+        <figcaption>Temple 2</figcaption>
+      </figure>
+      <figure>
+        <img src="images/temple-placeholder.jpg" alt="Temple placeholder image" loading="lazy" width="960" height="540">
+        <figcaption>Temple 3</figcaption>
+      </figure>
+      <figure>
+        <img src="images/temple-placeholder.jpg" alt="Temple placeholder image" loading="lazy" width="960" height="540">
+        <figcaption>Temple 4</figcaption>
+      </figure>
+      <figure>
+        <img src="images/temple-placeholder.jpg" alt="Temple placeholder image" loading="lazy" width="960" height="540">
+        <figcaption>Temple 5</figcaption>
+      </figure>
+      <figure>
+        <img src="images/temple-placeholder.jpg" alt="Temple placeholder image" loading="lazy" width="960" height="540">
+        <figcaption>Temple 6</figcaption>
+      </figure>
+      <figure>
+        <img src="images/temple-placeholder.jpg" alt="Temple placeholder image" loading="lazy" width="960" height="540">
+        <figcaption>Temple 7</figcaption>
+      </figure>
+      <figure>
+        <img src="images/temple-placeholder.jpg" alt="Temple placeholder image" loading="lazy" width="960" height="540">
+        <figcaption>Temple 8</figcaption>
+      </figure>
+      <figure>
+        <img src="images/temple-placeholder.jpg" alt="Temple placeholder image" loading="lazy" width="960" height="540">
+        <figcaption>Temple 9</figcaption>
+      </figure>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="currentyear"></span> Omar Lizandro Meza Ramirez | Perú</p>
+    <p id="lastModified"></p>
+  </footer>
+</body>
+</html>
