@@ -10,11 +10,20 @@ body {
   background: #fff;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
 header, main, footer {
   max-width: 980px;
   margin: 0 auto;
   padding: 1rem;
 }
+
+header { border-bottom: 1px solid #e5e7eb; }
+footer { border-top: 1px solid #e5e7eb; }
 
 nav {
   display: flex;
@@ -35,3 +44,9 @@ nav a:focus-visible {
   text-decoration: underline;
   text-underline-offset: 3px;
 }
+
+nav a:focus-visible {
+  outline: 2px solid #0b3aa4;
+  outline-offset: 2px;
+}
+
