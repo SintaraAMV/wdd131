@@ -30,3 +30,23 @@ if (filter) {
 window.addEventListener("resize", () => {
   if (window.innerWidth >= 800) setMenuState(false);
 });
+const dialog = document.querySelector("#imgDialog");
+const dialogImg = document.querySelector("#dialogImg");
+const dialogCaption = document.querySelector("#dialogCaption");
+const closeBtn = document.querySelector(".dialog-close");
+
+document.querySelectorAll(".gallery figure img").forEach(img => {
+  img.style.cursor = "zoom-in";
+  img.addEventListener("click", () => {
+    dialogImg.src = img.src;
+    dialogImg.alt = img.alt;
+    dialogCaption.textContent = img.closest("figure")?.querySelector("figcaption")?.textContent ?? "";
+    dialog.showModal();
+    closeBtn.focus();
+  });
+});
+
+closeBtn.addEventListener("click", () => dialog.close());
+dialog.addEventListener("click", (e) => {
+  if (e.target === dialog) dialog.close(); // click fuera
+});
