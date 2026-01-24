@@ -1,52 +1,38 @@
-@media (min-width: 800px) {
-  .hero {
+@media (min-width: 800px){
+  .hero{
     position: relative;
+    padding: 24px;
   }
 
-  .hero picture {
-    display: block;
-  }
-
-  /* Los cards ya NO empujan el footer porque salen del flujo */
-  .card {
+  /* En vista ancha, las tarjetas se superponen sobre la imagen */
+  .card{
     position: absolute;
-    margin-top: 0;           /* elimina el margin del flujo */
-    width: min(360px, 42%);
+    margin-top: 0;
+    z-index: 2;
+    max-width: 380px;
+    backdrop-filter: blur(2px);
   }
 
-  .card.data {
-    top: 24px;
-    left: 24px;
+  .data{
+    top: 34px;
+    left: 34px;
   }
 
-  .card.weather {
-    right: 24px;
-    bottom: 24px;
+  .weather{
+    top: 34px;
+    right: 34px;
+    max-width: 360px;
   }
-}
-@media (min-width: 800px) {
-  .weather-icon { display: none; }
 
-  .weather-title::after {
+  /* SVG solo móvil */
+  .weather-icon{
+    display: none;
+  }
+
+  /* Pseudo-element emoticon SOLO en vista ancha */
+  .weather-title::after{
     content: " ⛅";
   }
 }
-.hero { position: relative; }
 
-.hero picture { 
-  display: block;
-  position: relative;
-  z-index: 0;
-}
-
-.hero picture img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
-.card {
-  position: absolute;
-  z-index: 1;
-}
 
