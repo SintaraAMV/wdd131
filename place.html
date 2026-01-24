@@ -18,16 +18,17 @@
   </header>
 
   <main>
-    <section class="hero" aria-label="Hero section">
+    <div class="hero">
       <picture>
-        <!-- Orden importante con min-width: primero la más grande -->
+        <!-- Con min-width: ordena de mayor a menor -->
         <source srcset="images/hero-large.webp" media="(min-width: 1000px)" />
-        <source srcset="images/hero-medium.webp" media="(min-width: 700px)" />
+        <source srcset="images/hero-medium.webp" media="(min-width: 550px)" />
         <img
+          class="hero-img"
           src="images/hero-small.webp"
           alt="Landscape representing Peru"
-          width="600"
-          height="400"
+          width="1500"
+          height="750"
           loading="lazy"
           decoding="async"
         />
@@ -48,14 +49,15 @@
       <section class="card weather" aria-labelledby="weather-title">
         <h2 id="weather-title" class="weather-title">Weather</h2>
 
-        <!-- SVG: solo móvil (en vista ancha se oculta por CSS) -->
+        <!-- SVG: visible SOLO en móvil (se oculta en place-large.css) -->
         <img
           class="weather-icon"
           src="images/weather.svg"
-          alt=""
-          width="56"
-          height="56"
+          alt="Weather icon"
+          width="64"
+          height="64"
           loading="lazy"
+          decoding="async"
         />
 
         <dl class="kv">
@@ -72,7 +74,7 @@
           <dd><span id="windchill">N/A</span></dd>
         </dl>
       </section>
-    </section>
+    </div>
   </main>
 
   <footer class="site-footer">
@@ -81,4 +83,5 @@
   </footer>
 </body>
 </html>
+
 

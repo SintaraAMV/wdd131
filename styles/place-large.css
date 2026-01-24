@@ -1,11 +1,10 @@
-@media (min-width: 800px){
-  .hero{
+@media (min-width: 800px) {
+  .hero {
     position: relative;
-    padding: 24px;
   }
 
-  /* En vista ancha, las tarjetas se superponen sobre la imagen */
-  .card{
+  /* Tarjetas sobre la imagen */
+  .card {
     position: absolute;
     margin-top: 0;
     z-index: 2;
@@ -13,26 +12,27 @@
     backdrop-filter: blur(2px);
   }
 
-  .data{
+  .data {
     top: 34px;
     left: 34px;
   }
 
-  .weather{
+  .weather {
     top: 34px;
     right: 34px;
     max-width: 360px;
   }
 
-  /* SVG solo móvil */
-  .weather-icon{
+  /* SVG solo móvil: oculto en vista ancha */
+  .weather-icon {
     display: none;
   }
 
-  /* Pseudo-element emoticon SOLO en vista ancha */
-  .weather-title::after{
+  /* Emoticon SOLO en vista ancha */
+  .weather-title::after {
     content: " ⛅";
   }
 }
+
 
 
