@@ -18,20 +18,20 @@
   </header>
 
   <main>
-    <div class="hero">
+    <section class="hero" aria-label="Hero section">
       <picture>
-       <source srcset="images/hero-large.webp" media="(min-width: 1000px)" />
-       <source srcset="images/hero-medium.webp" media="(min-width: 550px)" />
+        <!-- Orden importante con min-width: primero la más grande -->
+        <source srcset="images/hero-large.webp" media="(min-width: 1000px)" />
+        <source srcset="images/hero-medium.webp" media="(min-width: 700px)" />
         <img
-         src="images/hero-small.webp"
-         alt="Landscape representing Peru"
-         width="1500"
-         height="750"
-         loading="lazy"
-         decoding="async"
+          src="images/hero-small.webp"
+          alt="Landscape representing Peru"
+          width="600"
+          height="400"
+          loading="lazy"
+          decoding="async"
         />
-    </picture>
-
+      </picture>
 
       <section class="card data" aria-labelledby="data-title">
         <h2 id="data-title">Data</h2>
@@ -48,8 +48,15 @@
       <section class="card weather" aria-labelledby="weather-title">
         <h2 id="weather-title" class="weather-title">Weather</h2>
 
-        <!-- SVG icon only for mobile view (hidden in large view via CSS) -->
-        <img class="weather-icon" src="images/weather.svg" alt="Weather icon" width="48" height="48" />
+        <!-- SVG: solo móvil (en vista ancha se oculta por CSS) -->
+        <img
+          class="weather-icon"
+          src="images/weather.svg"
+          alt=""
+          width="56"
+          height="56"
+          loading="lazy"
+        />
 
         <dl class="kv">
           <dt>Temperature</dt>
@@ -65,16 +72,13 @@
           <dd><span id="windchill">N/A</span></dd>
         </dl>
       </section>
-    </div>
+    </section>
   </main>
 
   <footer class="site-footer">
-    <p>
-      &copy; <span id="currentyear"></span> Omar Lizandro Meza Ramirez • Peru
-    </p>
-    <p class="muted">
-      Last Modified: <span id="lastModified"></span>
-    </p>
+    <p>&copy; <span id="currentyear"></span> Omar Lizandro Meza Ramirez • Peru</p>
+    <p class="muted">Last Modified: <span id="lastModified"></span></p>
   </footer>
 </body>
 </html>
+

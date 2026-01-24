@@ -1,51 +1,58 @@
-:root {
+:root{
   --bg: #0b1220;
   --surface: #111b2e;
   --text: #eef2ff;
-  --muted: rgba(238, 242, 255, 0.75);
+  --muted: rgba(238, 242, 255, 0.78);
   --accent: #f59e0b;
+
   --border: rgba(238, 242, 255, 0.18);
-  --shadow: 0 10px 20px rgba(0, 0, 0, 0.35);
+  --shadow: 0 10px 22px rgba(0,0,0,0.35);
+
   --radius: 14px;
   --gap: 16px;
 }
 
-* { box-sizing: border-box; }
+*,
+*::before,
+*::after { box-sizing: border-box; }
 
-body {
+body{
   margin: 0;
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   background: var(--bg);
   color: var(--text);
+  line-height: 1.5;
 }
 
-.site-header {
-  background: linear-gradient(180deg, rgba(245, 158, 11, 0.35), rgba(245, 158, 11, 0));
-  padding: 18px 16px;
+.site-header{
   text-align: center;
+  padding: 18px 16px;
   border-bottom: 1px solid var(--border);
+  background: linear-gradient(180deg, rgba(245,158,11,0.35), rgba(245,158,11,0));
 }
 
-.site-header h1 {
+.site-header h1{
   margin: 0;
   letter-spacing: 0.5px;
 }
 
-.hero {
+.hero{
   width: min(1100px, 100%);
   margin: 0 auto;
   padding: var(--gap);
 }
 
+/* Imagen hero */
 .hero picture,
-.hero img {
+.hero img{
   display: block;
   width: 100%;
   height: auto;
   border-radius: var(--radius);
 }
 
-.card {
+/* Tarjetas (base móvil = apiladas debajo de la imagen) */
+.card{
   margin-top: var(--gap);
   background: color-mix(in oklab, var(--surface) 92%, black);
   border: 1px solid var(--border);
@@ -54,7 +61,7 @@ body {
   box-shadow: var(--shadow);
 }
 
-.card h2 {
+.card h2{
   margin: 0 0 10px;
   display: flex;
   align-items: center;
@@ -63,43 +70,44 @@ body {
   border-bottom: 1px solid var(--border);
 }
 
-.weather-icon {
+/* SVG en móvil */
+.weather-icon{
   display: inline-block;
+  width: 56px;
+  height: 56px;
   margin: 8px 0 4px;
+  opacity: 0.95;
 }
 
-.kv {
+/* Lista clave-valor */
+.kv{
   margin: 0;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 10px 12px;
 }
 
-.kv dt {
+.kv dt{
   font-weight: 700;
   color: var(--muted);
 }
 
-.kv dd {
+.kv dd{
   margin: 0;
   text-align: right;
 }
 
-.unit { color: var(--muted); }
+.unit{ color: var(--muted); }
 
-.site-footer {
+.site-footer{
   text-align: center;
   padding: 18px 16px 24px;
   border-top: 1px solid var(--border);
 }
 
-.site-footer p {
-  margin: 6px 0;
-}
+.site-footer p{ margin: 6px 0; }
 
-.muted {
+.muted{
   color: var(--muted);
   font-size: 0.95rem;
 }
-.weather-icon { display: inline-block; }
-.weather-title::after { content: ""; } /* sin emoticon en mobile */
