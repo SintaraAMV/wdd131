@@ -1,33 +1,34 @@
 @media (min-width: 800px) {
   .hero {
     position: relative;
-    padding: 18px;
   }
 
+  .hero picture {
+    display: block;
+  }
+
+  /* Los cards ya NO empujan el footer porque salen del flujo */
   .card {
-    width: 340px;
-    margin-top: 0;
-  }
-
-  .data {
     position: absolute;
-    top: 28px;
-    left: 28px;
+    margin-top: 0;           /* elimina el margin del flujo */
+    width: min(360px, 42%);
   }
 
-  .weather {
-    position: absolute;
-    top: 28px;
-    right: 28px;
+  .card.data {
+    top: 24px;
+    left: 24px;
   }
 
-  /* Hide SVG icon in large view */
-  .weather-icon {
-    display: none;
+  .card.weather {
+    right: 24px;
+    bottom: 24px;
   }
+}
+@media (min-width: 800px) {
+  .weather-icon { display: none; }
 
-  /* Pseudo-element emoticon after the "Weather" heading (large view only) */
   .weather-title::after {
     content: " ⛅";
   }
 }
+

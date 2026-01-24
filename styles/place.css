@@ -101,3 +101,5 @@ body {
   color: var(--muted);
   font-size: 0.95rem;
 }
+.weather-icon { display: inline-block; }
+.weather-title::after { content: ""; } /* sin emoticon en mobile */
