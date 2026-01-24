@@ -1,0 +1,33 @@
+@media (min-width: 800px) {
+  .hero {
+    position: relative;
+    padding: 18px;
+  }
+
+  .card {
+    width: 340px;
+    margin-top: 0;
+  }
+
+  .data {
+    position: absolute;
+    top: 28px;
+    left: 28px;
+  }
+
+  .weather {
+    position: absolute;
+    top: 28px;
+    right: 28px;
+  }
+
+  /* Hide SVG icon in large view */
+  .weather-icon {
+    display: none;
+  }
+
+  /* Pseudo-element emoticon after the "Weather" heading (large view only) */
+  .weather-title::after {
+    content: " ⛅";
+  }
+}

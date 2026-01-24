@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Peru | Country Page</title>
+  <meta name="description" content="Country page for WDD 131 Week 03 assignment." />
+  <meta name="author" content="Omar Lizandro Meza Ramirez" />
+
+  <link rel="stylesheet" href="styles/place.css" />
+  <link rel="stylesheet" href="styles/place-large.css" />
+  <script src="scripts/place.js" defer></script>
+</head>
+
+<body>
+  <header class="site-header">
+    <h1>Peru</h1>
+  </header>
+
+  <main>
+    <div class="hero">
+      <picture>
+        <source srcset="images/hero-wide.webp" media="(min-width: 800px)" />
+        <img
+          src="images/hero-small.webp"
+          alt="Landscape representing Peru"
+          width="1500"
+          height="750"
+          loading="lazy"
+          decoding="async"
+        />
+      </picture>
+
+      <section class="card data" aria-labelledby="data-title">
+        <h2 id="data-title">Data</h2>
+        <dl class="kv">
+          <dt>Capital</dt><dd>Lima</dd>
+          <dt>Official Language</dt><dd>Spanish</dd>
+          <dt>Currency</dt><dd>PEN (S/)</dd>
+          <dt>Population</dt><dd>33M+</dd>
+          <dt>Region</dt><dd>South America</dd>
+          <dt>Time Zone</dt><dd>UTC−5</dd>
+        </dl>
+      </section>
+
+      <section class="card weather" aria-labelledby="weather-title">
+        <h2 id="weather-title" class="weather-title">Weather</h2>
+
+        <!-- SVG icon only for mobile view (hidden in large view via CSS) -->
+        <img class="weather-icon" src="images/weather.svg" alt="Weather icon" width="48" height="48" />
+
+        <dl class="kv">
+          <dt>Temperature</dt>
+          <dd><span id="temperature">9</span> <span class="unit">°C</span></dd>
+
+          <dt>Conditions</dt>
+          <dd><span id="conditions">Partly Cloudy</span></dd>
+
+          <dt>Wind</dt>
+          <dd><span id="windspeed">7</span> <span class="unit">km/h</span></dd>
+
+          <dt>Wind Chill</dt>
+          <dd><span id="windchill">N/A</span></dd>
+        </dl>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      &copy; <span id="currentyear"></span> Omar Lizandro Meza Ramirez • Peru
+    </p>
+    <p class="muted">
+      Last Modified: <span id="lastModified"></span>
+    </p>
+  </footer>
+</body>
+</html>

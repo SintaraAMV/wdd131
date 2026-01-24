@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120" role="img" aria-label="Weather icon">
+  <defs>
+    <style>
+      .stroke { fill: none; stroke: #111; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; }
+    </style>
+  </defs>
+
+  <!-- Sun -->
+  <circle class="stroke" cx="35" cy="35" r="14"></circle>
+  <line class="stroke" x1="35" y1="8" x2="35" y2="16"></line>
+  <line class="stroke" x1="35" y1="54" x2="35" y2="62"></line>
+  <line class="stroke" x1="8" y1="35" x2="16" y2="35"></line>
+  <line class="stroke" x1="54" y1="35" x2="62" y2="35"></line>
+  <line class="stroke" x1="16" y1="16" x2="22" y2="22"></line>
+  <line class="stroke" x1="48" y1="48" x2="54" y2="54"></line>
+  <line class="stroke" x1="48" y1="22" x2="54" y2="16"></line>
+  <line class="stroke" x1="16" y1="54" x2="22" y2="48"></line>
+
+  <!-- Cloud -->
+  <path class="stroke" d="M70 78
+    c-8 0-14-6-14-14
+    c0-7 5-13 12-14
+    c3-7 10-11 18-11
+    c11 0 20 9 20 20
+    c6 1 10 6 10 12
+    c0 7-6 13-13 13
+    H70z"></path>
+</svg>
