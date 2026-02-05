@@ -1,0 +1,4 @@
+/* tarjetas ocupan 25% a partir de pantallas muy anchas */
+@media (min-width:1200px){
+  .temples{grid-template-columns:repeat(4,1fr)}
+}

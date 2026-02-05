@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Filtered Temple Album</title>
+
+  <!-- meta para SEO / Lighthouse -->
+  <meta name="description" content="Interactive LDS temple album with filters (WDD 131 • Week 04)." />
+  <meta name="author" content="Omar Lizandro Meza Ramirez" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles/filtered-temples.css" />
+  <link rel="stylesheet" href="styles/filtered-temples-large.css" />
+
+  <!-- JS -->
+  <script src="scripts/filtered-temples.js" defer></script>
+</head>
+<body>
+
+<header>
+  <h1>Temple Picture Album</h1>
+
+  <nav class="filters" aria-label="Temple filters">
+    <button class="filter-btn" data-filter="home">Home</button>
+    <button class="filter-btn" data-filter="old">Old (&lt; 1900)</button>
+    <button class="filter-btn" data-filter="new">New (&gt; 2000)</button>
+    <button class="filter-btn" data-filter="large">Large (&gt; 90 k)</button>
+    <button class="filter-btn" data-filter="small">Small (&lt; 10 k)</button>
+  </nav>
+</header>
+
+<main>
+  <!-- Aquí se inyectarán las cards -->
+  <section id="temples" class="temples" aria-label="Temple cards"></section>
+</main>
+
+<footer>
+  <p>&copy; <span id="currentyear"></span> Omar Lizandro Meza Ramirez</p>
+  <p class="muted">Last Modified: <span id="lastModified"></span></p>
+</footer>
+
+</body>
+</html>
