@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>WDD131 Practical Guide | Home</title>
+  <meta name="description" content="A practical guide to WDD131 with resources, progress tracking, and study checklists." />
+  <link rel="stylesheet" href="styles/site.css" />
+  <script src="scripts/site.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrapper header-inner">
+      <div class="brand">
+        <img src="images/hero.svg" alt="WDD131 Guide icon" width="40" height="40" />
+        <div>
+          <h1>WDD131 Practical Guide</h1>
+          <p>Resources • Tracker • Feedback</p>
+        </div>
+      </div>
+
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="resources.html">Resources</a>
+        <a href="tracker.html">Tracker <span class="badge" data-completed-badge>0</span></a>
+        <a href="feedback.html">Feedback</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="wrapper">
+    <section class="hero" aria-label="Overview">
+      <div class="hero-inner">
+        <div>
+          <h2>Study with a system, not with luck</h2>
+          <p>
+            This site consolidates a simple workflow: pick your next resource, mark it done,
+            and keep your progress visible. The goal is consistency and clarity.
+          </p>
+          <div class="actions">
+            <a href="resources.html" class="pill ok" style="text-decoration:none;">Go to Resources</a>
+            <a href="tracker.html" class="pill" style="text-decoration:none;">Open Tracker</a>
+          </div>
+        </div>
+
+        <div class="kpi">
+          <div class="card"><strong>3+</strong><span>Pages (minimum met)</span></div>
+          <div class="card"><strong>JS</strong><span>DOM + Events</span></div>
+          <div class="card"><strong>localStorage</strong><span>State saved</span></div>
+          <div class="card"><strong>A11y</strong><span>Contrast checks</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h3>How to use this guide</h3>
+      <ol class="muted">
+        <li>Open <strong>Resources</strong>, filter by week/type, and pick one item.</li>
+        <li>Mark it <strong>done</strong> when completed and optionally add it to <strong>favorites</strong>.</li>
+        <li>Use <strong>Tracker</strong> to keep momentum (and detect stagnation early).</li>
+      </ol>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <p>&copy; <span id="currentyear"></span> WDD 131</p>
+        <p>Last Modification: <span id="lastmodified"></span></p>
+      </div>
+      <div>
+        <a href="references.html">References</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

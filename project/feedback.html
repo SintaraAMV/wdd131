@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>WDD131 Practical Guide | Feedback</title>
+  <meta name="description" content="Send feedback and suggestions for improving the WDD131 guide." />
+  <link rel="stylesheet" href="styles/site.css" />
+  <script src="scripts/site.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrapper header-inner">
+      <div class="brand">
+        <img src="images/hero.svg" alt="WDD131 Guide icon" width="40" height="40" loading="lazy" />
+        <div>
+          <h1>Feedback</h1>
+          <p>Form + simple confirmation</p>
+        </div>
+      </div>
+
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="resources.html">Resources</a>
+        <a href="tracker.html">Tracker <span class="badge" data-completed-badge>0</span></a>
+        <a href="feedback.html">Feedback</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="wrapper">
+    <section class="panel">
+      <h3>Send a message</h3>
+      <p class="muted">Fields marked with * are required.</p>
+
+      <form method="get" action="thanks.html" class="card" style="margin-top:12px;">
+        <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+          <div>
+            <label for="name">Name (optional)</label>
+            <input id="name" name="name" type="text" autocomplete="name" />
+          </div>
+          <div>
+            <label for="email">Email (optional)</label>
+            <input id="email" name="email" type="email" autocomplete="email" />
+          </div>
+        </div>
+
+        <div style="margin-top:12px;">
+          <label for="topic">Topic *</label>
+          <select id="topic" name="topic" required>
+            <option value="" selected disabled>Select one...</option>
+            <option value="Content">Content</option>
+            <option value="Design">Design</option>
+            <option value="Bug">Bug</option>
+            <option value="Suggestion">Suggestion</option>
+          </select>
+        </div>
+
+        <fieldset style="margin-top:12px; border:1px solid rgba(185,198,234,.14); border-radius:12px; padding: 12px;">
+          <legend style="padding:0 8px;">Urgency (optional)</legend>
+          <div style="display:flex; gap: 14px; flex-wrap:wrap; margin-top:8px;">
+            <label><input type="radio" name="urgency" value="Low" /> Low</label>
+            <label><input type="radio" name="urgency" value="Medium" /> Medium</label>
+            <label><input type="radio" name="urgency" value="High" /> High</label>
+          </div>
+        </fieldset>
+
+        <div style="margin-top:12px;">
+          <label for="message">Message *</label>
+          <textarea id="message" name="message" rows="5" required placeholder="Write a clear, specific message..."></textarea>
+        </div>
+
+        <div class="actions" style="margin-top:12px;">
+          <button class="primary" type="submit">Submit</button>
+          <button class="ghost" type="reset">Reset</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <p>&copy; <span id="currentyear"></span> WDD 131</p>
+        <p>Last Modification: <span id="lastmodified"></span></p>
+      </div>
+      <div>
+        <a href="references.html">References</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

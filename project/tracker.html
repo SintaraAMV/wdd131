@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>WDD131 Practical Guide | Tracker</title>
+  <meta name="description" content="Track completed resources and favorites saved in localStorage." />
+  <link rel="stylesheet" href="styles/site.css" />
+  <script src="scripts/site.js" defer></script>
+  <script src="scripts/data.js" defer></script>
+  <script src="scripts/tracker.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrapper header-inner">
+      <div class="brand">
+        <img src="images/hero.svg" alt="WDD131 Guide icon" width="40" height="40" loading="lazy" />
+        <div>
+          <h1>Tracker</h1>
+          <p>Progress visibility</p>
+        </div>
+      </div>
+
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="resources.html">Resources</a>
+        <a href="tracker.html">Tracker <span class="badge" data-completed-badge>0</span></a>
+        <a href="feedback.html">Feedback</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="wrapper">
+    <section class="panel">
+      <h3>Stats</h3>
+      <div id="stats"></div>
+    </section>
+
+    <section class="panel">
+      <h3>Completed</h3>
+      <ul id="completedList"></ul>
+    </section>
+
+    <section class="panel">
+      <h3>Favorites</h3>
+      <ul id="favoriteList"></ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <p>&copy; <span id="currentyear"></span> WDD 131</p>
+        <p>Last Modification: <span id="lastmodified"></span></p>
+      </div>
+      <div>
+        <a href="references.html">References</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

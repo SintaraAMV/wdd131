@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>WDD131 Practical Guide | Thanks</title>
+  <meta name="description" content="Feedback confirmation page." />
+  <link rel="stylesheet" href="styles/site.css" />
+  <script src="scripts/site.js" defer></script>
+  <script src="scripts/thanks.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrapper header-inner">
+      <div class="brand">
+        <img src="images/hero.svg" alt="WDD131 Guide icon" width="40" height="40" loading="lazy" />
+        <div>
+          <h1>Thanks</h1>
+          <p>Confirmation + localStorage</p>
+        </div>
+      </div>
+
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="resources.html">Resources</a>
+        <a href="tracker.html">Tracker <span class="badge" data-completed-badge>0</span></a>
+        <a href="feedback.html">Feedback</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="wrapper">
+    <section class="panel">
+      <h3>Submission recorded</h3>
+      <p class="muted">Total feedback submissions stored on this browser: <strong id="feedbackCount">0</strong></p>
+      <div id="summary"></div>
+
+      <div class="actions" style="margin-top:12px;">
+        <a href="resources.html" class="pill ok" style="text-decoration:none;">Back to Resources</a>
+        <a href="feedback.html" class="pill" style="text-decoration:none;">Send another</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <p>&copy; <span id="currentyear"></span> WDD 131</p>
+        <p>Last Modification: <span id="lastmodified"></span></p>
+      </div>
+      <div>
+        <a href="references.html">References</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
