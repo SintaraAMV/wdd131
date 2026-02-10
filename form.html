@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Product Review</title>
+  <meta name="description" content="Product review form (WDD 131 - Week 05)" />
+  <meta name="author" content="Omar Lizandro Meza Ramirez" />
+
+  <link rel="stylesheet" href="styles/form.css" />
+  <script src="scripts/form.js" defer></script>
+  <script src="scripts/getdates.js" defer></script> <!-- si ya lo usas para el footer -->
+</head>
+
+<body>
+  <header>
+    <h1>Product Review</h1>
+  </header>
+
+  <main>
+    <form method="get" action="review.html" id="reviewForm">
+      <!-- Product Name -->
+      <div class="field">
+        <label for="productName">Product Name <span aria-hidden="true">*</span></label>
+        <select id="productName" name="productName" required>
+          <option value="" disabled selected>Select a Product ...</option>
+          <!-- opciones dinámicas -->
+        </select>
+      </div>
+
+      <!-- Overall Rating -->
+      <fieldset class="field">
+        <legend>Overall Rating <span aria-hidden="true">*</span></legend>
+
+        <div class="rating">
+          <label for="rating1">
+            <input id="rating1" type="radio" name="overallRating" value="1" required />
+            ☆
+          </label>
+          <label for="rating2">
+            <input id="rating2" type="radio" name="overallRating" value="2" />
+            ☆☆
+          </label>
+          <label for="rating3">
+            <input id="rating3" type="radio" name="overallRating" value="3" />
+            ☆☆☆
+          </label>
+          <label for="rating4">
+            <input id="rating4" type="radio" name="overallRating" value="4" />
+            ☆☆☆☆
+          </label>
+          <label for="rating5">
+            <input id="rating5" type="radio" name="overallRating" value="5" />
+            ☆☆☆☆☆
+          </label>
+        </div>
+      </fieldset>
+
+      <!-- Date of Installation -->
+      <div class="field">
+        <label for="installDate">Date of Installation <span aria-hidden="true">*</span></label>
+        <input id="installDate" name="installDate" type="date" required />
+      </div>
+
+      <!-- Useful Features -->
+      <fieldset class="field">
+        <legend>Useful Features (check all that apply)</legend>
+        <label for="feature1">
+          <input id="feature1" name="features" type="checkbox" value="durability" />
+          Durability
+        </label>
+        <label for="feature2">
+          <input id="feature2" name="features" type="checkbox" value="ease_of_use" />
+          Ease of Use
+        </label>
+        <label for="feature3">
+          <input id="feature3" name="features" type="checkbox" value="performance" />
+          Performance
+        </label>
+        <label for="feature4">
+          <input id="feature4" name="features" type="checkbox" value="support" />
+          Customer Support
+        </label>
+      </fieldset>
+
+      <!-- Written Review -->
+      <div class="field">
+        <label for="writtenReview">Written Review</label>
+        <textarea id="writtenReview" name="writtenReview" rows="5" placeholder="Write your review..."></textarea>
+      </div>
+
+      <!-- User Name -->
+      <div class="field">
+        <label for="userName">Your Name</label>
+        <input id="userName" name="userName" type="text" autocomplete="name" />
+      </div>
+
+      <!-- Submit -->
+      <div class="actions">
+        <input type="submit" value="Submit Review" />
+      </div>
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="currentyear"></span> Omar Lizandro Meza Ramirez</p>
+    <p class="muted">Last Modified: <span id="lastModified"></span></p>
+  </footer>
+</body>
+</html>
