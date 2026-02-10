@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Website Planning Document | WDD 131</title>
+  <meta name="description" content="W05 Project: Website Planning Document (Site Plan) for WDD 131.">
+  <meta name="author" content="Your Name">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/siteplan.css">
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <img src="images/logo.svg" alt="Site logo" width="44" height="44">
+      <div>
+        <p class="kicker">W05 Project</p>
+        <h1>Website Planning Document</h1>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section aria-labelledby="site-name">
+      <h2 id="site-name">1. Site Name</h2>
+      <p><strong>Proposed name:</strong> <span class="pill">WDD131 Practical Guide</span></p>
+      <p><strong>Why this name:</strong> It clearly signals a course-focused site that helps students navigate practical topics and examples in WDD 131.</p>
+      <p class="note"><strong>Optional domain idea:</strong> wdd131-practical.example (domain purchase is not required).</p>
+    </section>
+
+    <section aria-labelledby="site-purpose">
+      <h2 id="site-purpose">2. Site Purpose</h2>
+      <p>
+        This site provides a structured hub for WDD 131 learners to quickly find explanations,
+        examples, and checklists for dynamic web fundamentals. It focuses on practical application:
+        short guides, validated code patterns, and common pitfalls to avoid while building course assignments.
+      </p>
+    </section>
+
+    <section aria-labelledby="scenarios">
+      <h2 id="scenarios">3. Scenarios</h2>
+      <ul>
+        <li>How can I validate my HTML/CSS and fix the most common errors quickly?</li>
+        <li>Where can I find a proven structure for forms, accessibility, and responsive layouts for course assignments?</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="colors">
+      <h2 id="colors">4. Color Schema</h2>
+      <p><strong>Primary:</strong> #0F172A (headings, header background accents)</p>
+      <p><strong>Secondary:</strong> #2563EB (links, buttons, emphasis)</p>
+      <p><strong>Neutral:</strong> #F8FAFC (page background), #111827 (body text)</p>
+
+      <div class="swatches" role="list" aria-label="Color swatches">
+        <div class="swatch" role="listitem"><span class="chip c1"></span><span>#0F172A</span></div>
+        <div class="swatch" role="listitem"><span class="chip c2"></span><span>#2563EB</span></div>
+        <div class="swatch" role="listitem"><span class="chip c3"></span><span>#F8FAFC</span></div>
+      </div>
+
+      <p class="note">These colors are applied on this document (header, headings, links, and callouts).</p>
+    </section>
+
+    <section aria-labelledby="type">
+      <h2 id="type">5. Typography</h2>
+      <ul>
+        <li><strong>Headings:</strong> Merriweather (h1–h3)</li>
+        <li><strong>Body:</strong> Inter (paragraphs, lists, UI text)</li>
+      </ul>
+      <p class="note">Typography is applied on this document (headings vs body text).</p>
+    </section>
+
+    <section aria-labelledby="wireframes">
+      <h2 id="wireframes">6. Wireframes</h2>
+
+      <div class="wireframes">
+        <figure class="wf">
+          <figcaption><strong>Mobile Home Layout</strong></figcaption>
+          <div class="wf-box" aria-label="Mobile wireframe">
+            <div class="wf-header">Header / Logo</div>
+            <div class="wf-nav">Menu</div>
+            <div class="wf-hero">Hero / Intro</div>
+            <div class="wf-grid">
+              <div class="wf-card">Section 1</div>
+              <div class="wf-card">Section 2</div>
+              <div class="wf-card">Section 3</div>
+            </div>
+            <div class="wf-footer">Footer</div>
+          </div>
+        </figure>
+
+        <figure class="wf">
+          <figcaption><strong>Desktop Home Layout</strong></figcaption>
+          <div class="wf-box" aria-label="Desktop wireframe">
+            <div class="wf-header">Header / Logo + Nav</div>
+            <div class="wf-hero">Hero / Intro (2 columns)</div>
+            <div class="wf-grid wf-grid-3">
+              <div class="wf-card">Section 1</div>
+              <div class="wf-card">Section 2</div>
+              <div class="wf-card">Section 3</div>
+            </div>
+            <div class="wf-footer">Footer</div>
+          </div>
+        </figure>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> | WDD 131 | Website Planning Document</p>
+    <p class="muted">Last updated: <span id="last-modified"></span></p>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+    document.getElementById("last-modified").textContent = document.lastModified;
+  </script>
+</body>
+</html>
