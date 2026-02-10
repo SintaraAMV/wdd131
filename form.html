@@ -3,108 +3,96 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Product Review</title>
-  <meta name="description" content="Product review form (WDD 131 - Week 05)" />
-  <meta name="author" content="Omar Lizandro Meza Ramirez" />
-
+  <title>Product Review Form</title>
+  <meta name="description" content="Submit a product review." />
   <link rel="stylesheet" href="styles/form.css" />
   <script src="scripts/form.js" defer></script>
-  <script src="scripts/getdates.js" defer></script> <!-- si ya lo usas para el footer -->
 </head>
 
 <body>
-  <header>
+  <header class="site-header">
     <h1>Product Review</h1>
   </header>
 
-  <main>
-    <form method="get" action="review.html" id="reviewForm">
-      <!-- Product Name -->
+  <main class="container">
+    <form class="review-form" method="get" action="review.html">
+      <!-- Product -->
       <div class="field">
-        <label for="productName">Product Name <span aria-hidden="true">*</span></label>
+        <label for="productName">Product Name <span class="req" aria-hidden="true">*</span></label>
         <select id="productName" name="productName" required>
           <option value="" disabled selected>Select a Product ...</option>
-          <!-- opciones dinámicas -->
+          <!-- options injected by JS -->
         </select>
       </div>
 
-      <!-- Overall Rating -->
+      <!-- Rating -->
       <fieldset class="field">
-        <legend>Overall Rating <span aria-hidden="true">*</span></legend>
+        <legend>Overall Rating <span class="req" aria-hidden="true">*</span></legend>
 
-        <div class="rating">
-          <label for="rating1">
-            <input id="rating1" type="radio" name="overallRating" value="1" required />
-            ☆
+        <div class="radio-grid" role="radiogroup" aria-label="Overall rating">
+          <label class="radio">
+            <input type="radio" id="rating1" name="overallRating" value="1" required />
+            <span>1</span>
           </label>
-          <label for="rating2">
-            <input id="rating2" type="radio" name="overallRating" value="2" />
-            ☆☆
+          <label class="radio">
+            <input type="radio" id="rating2" name="overallRating" value="2" required />
+            <span>2</span>
           </label>
-          <label for="rating3">
-            <input id="rating3" type="radio" name="overallRating" value="3" />
-            ☆☆☆
+          <label class="radio">
+            <input type="radio" id="rating3" name="overallRating" value="3" required />
+            <span>3</span>
           </label>
-          <label for="rating4">
-            <input id="rating4" type="radio" name="overallRating" value="4" />
-            ☆☆☆☆
+          <label class="radio">
+            <input type="radio" id="rating4" name="overallRating" value="4" required />
+            <span>4</span>
           </label>
-          <label for="rating5">
-            <input id="rating5" type="radio" name="overallRating" value="5" />
-            ☆☆☆☆☆
+          <label class="radio">
+            <input type="radio" id="rating5" name="overallRating" value="5" required />
+            <span>5</span>
           </label>
         </div>
       </fieldset>
 
-      <!-- Date of Installation -->
+      <!-- Date -->
       <div class="field">
-        <label for="installDate">Date of Installation <span aria-hidden="true">*</span></label>
-        <input id="installDate" name="installDate" type="date" required />
+        <label for="installDate">Date of Installation <span class="req" aria-hidden="true">*</span></label>
+        <input type="date" id="installDate" name="installDate" required />
       </div>
 
-      <!-- Useful Features -->
+      <!-- Features -->
       <fieldset class="field">
         <legend>Useful Features (check all that apply)</legend>
-        <label for="feature1">
-          <input id="feature1" name="features" type="checkbox" value="durability" />
-          Durability
-        </label>
-        <label for="feature2">
-          <input id="feature2" name="features" type="checkbox" value="ease_of_use" />
-          Ease of Use
-        </label>
-        <label for="feature3">
-          <input id="feature3" name="features" type="checkbox" value="performance" />
-          Performance
-        </label>
-        <label for="feature4">
-          <input id="feature4" name="features" type="checkbox" value="support" />
-          Customer Support
-        </label>
+        <div class="checks">
+          <label><input type="checkbox" id="feat1" name="features" value="durability" /> Durability</label>
+          <label><input type="checkbox" id="feat2" name="features" value="performance" /> Performance</label>
+          <label><input type="checkbox" id="feat3" name="features" value="ease-of-use" /> Ease of use</label>
+          <label><input type="checkbox" id="feat4" name="features" value="design" /> Design</label>
+        </div>
       </fieldset>
 
-      <!-- Written Review -->
+      <!-- Written review -->
       <div class="field">
-        <label for="writtenReview">Written Review</label>
+        <label for="writtenReview">Written Review (optional)</label>
         <textarea id="writtenReview" name="writtenReview" rows="5" placeholder="Write your review..."></textarea>
       </div>
 
-      <!-- User Name -->
+      <!-- User name -->
       <div class="field">
-        <label for="userName">Your Name</label>
-        <input id="userName" name="userName" type="text" autocomplete="name" />
+        <label for="userName">Your Name (optional)</label>
+        <input type="text" id="userName" name="userName" autocomplete="name" />
       </div>
 
-      <!-- Submit -->
       <div class="actions">
-        <input type="submit" value="Submit Review" />
+        <button type="submit">Submit Review</button>
+        <p class="hint"><span class="req" aria-hidden="true">*</span> required</p>
       </div>
     </form>
   </main>
 
-  <footer>
-    <p>&copy; <span id="currentyear"></span> Omar Lizandro Meza Ramirez</p>
-    <p class="muted">Last Modified: <span id="lastModified"></span></p>
+  <footer class="site-footer">
+    <p>&copy; <span id="currentyear"></span> WDD 131</p>
+    <p>Last Modification: <span id="lastmodified"></span></p>
+    <script src="scripts/getdates.js" defer></script>
   </footer>
 </body>
 </html>

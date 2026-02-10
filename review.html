@@ -4,31 +4,29 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Review Submitted</title>
-  <meta name="description" content="Review confirmation page (WDD 131 - Week 05)" />
-  <meta name="author" content="Omar Lizandro Meza Ramirez" />
-
+  <meta name="description" content="Review submission confirmation." />
   <link rel="stylesheet" href="styles/form.css" />
   <script src="scripts/review.js" defer></script>
-  <script src="scripts/getdates.js" defer></script>
 </head>
 
 <body>
-  <header>
-    <h1>Thank you</h1>
+  <header class="site-header">
+    <h1>Thank you!</h1>
   </header>
 
-  <main>
+  <main class="container">
     <section class="card">
-      <h2>Review received</h2>
-      <p>Your review has been submitted successfully.</p>
-      <p><strong>Total reviews submitted:</strong> <span id="reviewCount">0</span></p>
+      <h2>Review submitted successfully</h2>
+      <p>Your review has been recorded.</p>
+      <p><strong>Total reviews completed:</strong> <span id="reviewCount">0</span></p>
       <p><a href="form.html">Submit another review</a></p>
     </section>
   </main>
 
-  <footer>
-    <p>&copy; <span id="currentyear"></span> Omar Lizandro Meza Ramirez</p>
-    <p class="muted">Last Modified: <span id="lastModified"></span></p>
+  <footer class="site-footer">
+    <p>&copy; <span id="currentyear"></span> WDD 131</p>
+    <p>Last Modification: <span id="lastmodified"></span></p>
+    <script src="scripts/getdates.js" defer></script>
   </footer>
 </body>
 </html>
