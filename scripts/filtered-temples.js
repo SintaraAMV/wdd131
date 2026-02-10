@@ -1,19 +1,19 @@
 /* ---------- datos ---------- */
-// 7 templos originales (copiados del PDF del curso ↓↓↓  – NO los cambies)
+
 const temples = [
   {
     templeName: "Aba Nigeria Temple",
     location: "Aba, Nigeria",
     dedicated: "2005-08-07",
     area: 11500,
-    imageUrl: "https://churchofjesuschrist.org/imgs/cf0910dfae1f11ed8636eeeeac1e28a1"
+    imageUrl: "https://churchofjesuschrist.org/imgs/cf0910dfae1f11ed8636eeeeac1e28a1.jpg"
   },
   {
     templeName: "Bern Switzerland Temple",
     location: "Bern, Switzerland",
     dedicated: "1955-09-11",
     area: 35500,
-    imageUrl: "https://churchofjesuschrist.org/imgs/e43bbc0cfe9911eab671eeeeac1e6505"
+    imageUrl: "images/bern_switzerland_temple_6.jpeg"
   },
   {
     templeName: "Cebu City Philippines Temple",
@@ -48,7 +48,7 @@ const temples = [
     location: "Bogotá, Colombia",
     dedicated: "1999-04-24",
     area: 53500,
-    imageUrl: "https://churchofjesuschrist.org/imgs/9eea58473d1b11ed8007eeeeac1f3cca"
+    imageUrl: "images/bogota_colombia_temple_5.jpeg"
   },
   {
     templeName: "Adelaide Australia Temple",
