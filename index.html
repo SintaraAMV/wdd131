@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WDD 131 – Dynamic Web Fundamentals – Omar Lizandro</title>
+  <meta
+    name="description"
+    content="WDD 131 – Dynamic Web Fundamentals – Omar Lizandro course landing page with personal information, learning goals, and project links."
+  >
+  <meta name="author" content="Omar Lizandro">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Merriweather:wght@700&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="styles/base.css">
+  <script src="scripts/getdates.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <span id="course-title">WDD 131 – Dynamic Web Fundamentals</span>
+
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href="https://byupw.instructure.com/" target="_blank" rel="noopener noreferrer">Canvas</a>
+      <a
+        href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/3?lang=eng&id=p7#p7"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Favorite Scripture
+      </a>
+      <a href="final-project/">Final Project</a>
+    </nav>
+  </header>
+
+  <main class="page">
+    <h1>Omar Lizandro</h1>
+
+    <div class="cards">
+      <section class="card">
+        <div class="card-header">
+          <h2>About Me</h2>
+        </div>
+
+        <div class="card-content card-grid">
+          <div>
+            <p>
+              I am building a strong foundation in web development through WDD 131.
+              I enjoy learning how structure, design, and accessibility work together
+              to create pages that are clean, useful, and visually consistent.
+            </p>
+            <p>
+              My current focus is improving my HTML, CSS, and JavaScript fundamentals,
+              following good development standards, and creating projects that are
+              organized, responsive, and ready for audit and review.
+            </p>
+
+            <ul class="info-list">
+              <li><strong>Focus:</strong> Frontend fundamentals</li>
+              <li><strong>Goal:</strong> Build polished, standards-based pages</li>
+              <li><strong>Strength:</strong> Consistency and attention to detail</li>
+            </ul>
+          </div>
+
+          <img
+            src="images/profile-card.svg"
+            alt="Illustration representing a personal profile card"
+            width="800"
+            height="500"
+          >
+        </div>
+      </section>
+
+      <section class="card">
+        <div class="card-header">
+          <h2>Learning Goals</h2>
+        </div>
+
+        <div class="card-content card-grid">
+          <img
+            src="images/goals-card.svg"
+            alt="Illustration representing web development goals and project work"
+            width="800"
+            height="500"
+            loading="lazy"
+          >
+
+          <div>
+            <p>
+              This page is the starting point for my course work. It will connect to
+              future assignments and to my final project folder as the course progresses.
+            </p>
+            <p>
+              My goal is to create pages that pass technical audits, maintain strong color
+              contrast, use semantic HTML, and deliver a smooth user experience on desktop
+              and smaller screens.
+            </p>
+
+            <ul class="info-list">
+              <li><strong>Design:</strong> Clear alignment and visual hierarchy</li>
+              <li><strong>Accessibility:</strong> Strong contrast and readable structure</li>
+              <li><strong>Performance:</strong> Lightweight local assets</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      &copy; <span id="currentyear"></span> Omar Lizandro | Your Country
+    </p>
+    <p id="lastModified"></p>
+  </footer>
+</body>
+</html>
