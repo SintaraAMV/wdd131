@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200" width="300" height="200" role="img" aria-labelledby="title desc">
+  <title id="title">Flag of Peru</title>
+  <desc id="desc">Official flag of Peru with three vertical bands red, white, and red.</desc>
+  <rect width="100" height="200" x="0" y="0" fill="#d91023"/>
+  <rect width="100" height="200" x="100" y="0" fill="#ffffff"/>
+  <rect width="100" height="200" x="200" y="0" fill="#d91023"/>
+</svg>

@@ -6,14 +6,14 @@
   <title>WDD 131 – Dynamic Web Fundamentals – Omar Lizandro</title>
   <meta
     name="description"
-    content="WDD 131 – Dynamic Web Fundamentals – Omar Lizandro home page with personal profile, web development resources, and course project links."
+    content="WDD 131 – Dynamic Web Fundamentals – Omar Lizandro home page with personal information and web development resources."
   >
   <meta name="author" content="Omar Lizandro">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Roboto+Slab:wght@700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"
     rel="stylesheet"
   >
 
@@ -21,10 +21,9 @@
   <script src="scripts/getdates.js" defer></script>
 </head>
 <body>
-  <header class="site-header">
-    <span id="course-title">WDD 131 – Dynamic Web Fundamentals</span>
-
-    <nav class="site-nav" aria-label="Main navigation">
+  <header>
+    <span id="course-title">WDD 131: Dynamic Web Fundamentals</span>
+    <nav>
       <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
       <a href="https://byupw.instructure.com/" target="_blank" rel="noopener noreferrer">Canvas</a>
       <a
@@ -32,87 +31,84 @@
         target="_blank"
         rel="noopener noreferrer"
       >
-        Favorite Scripture
+        Scripture
       </a>
       <a href="final-project/">Final Project</a>
     </nav>
   </header>
 
-  <main class="page">
+  <main>
     <h1>Omar Lizandro</h1>
 
-    <div class="cards">
-      <section class="card">
-        <div class="card-header">
-          <h2>About Me</h2>
+    <section class="card">
+      <h2>About Me</h2>
+
+      <div class="about-top">
+        <div>
+          <p>
+            My name is Omar and I am from Peru. I am currently studying web
+            development and working to improve my HTML, CSS, and JavaScript
+            skills. I enjoy learning how to build clean, organized, and useful
+            websites.
+          </p>
+          <p>
+            I like technology, design, and creating projects that follow good
+            structure and accessibility practices. My goal is to keep improving
+            until I can build solid and professional web pages.
+          </p>
         </div>
 
-        <div class="card-content card-grid">
-          <div class="card-text">
-            <p>
-              I am building my foundation in web development through WDD 131.
-              I enjoy creating pages that are clean, organized, and easy to use.
-            </p>
-            <p>
-              My current focus is improving my HTML, CSS, and JavaScript skills
-              while following good development standards, accessibility practices,
-              and responsive design principles.
-            </p>
+        <img
+          src="images/profile.jpg"
+          alt="Portrait of Omar Lizandro"
+          class="profile-photo"
+          width="300"
+          height="360"
+        >
+      </div>
 
-            <h3>Personal Highlights</h3>
-            <ul class="info-list">
-              <li><strong>Goal:</strong> Build polished, standards-based websites</li>
-              <li><strong>Interest:</strong> Frontend design and usability</li>
-              <li><strong>Focus:</strong> Clean structure and consistent styling</li>
-            </ul>
-          </div>
+      <div class="location-block">
+        <h3>Lima, Peru</h3>
 
-          <img
-            src="images/profile.jpg"
-            alt="Portrait of Omar Lizandro"
-            width="500"
-            height="600"
-            class="profile-photo"
-          >
+        <div class="country-info">
+          <figure>
+            <img
+              src="images/peru-flag.svg"
+              alt="Official flag of Peru"
+              width="220"
+              height="140"
+              class="flag"
+            >
+            <figcaption>Official Flag of Peru</figcaption>
+          </figure>
+
+          <p>
+            Peru is a country in western South America known for its rich
+            history, diverse geography, and cultural heritage. It is home to
+            the Andes Mountains, the Amazon rainforest, and important historical
+            sites such as Machu Picchu.
+          </p>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section class="card">
-        <div class="card-header">
-          <h2>Web Dev Resources</h2>
-        </div>
+    <section class="card">
+      <h2>Web Dev Resources</h2>
 
-        <div class="card-content card-grid">
-          <img
-            src="images/resources-card.svg"
-            alt="Illustration representing web development resources and study tools"
-            width="800"
-            height="500"
-            loading="lazy"
-          >
-
-          <div class="card-text">
-            <p>
-              These are some helpful resources I can use throughout this course
-              to improve my web development knowledge and project quality.
-            </p>
-
-            <h3>Helpful Links</h3>
-            <ul class="resource-list">
-              <li><a href="https://developer.mozilla.org/" target="_blank" rel="noopener noreferrer">MDN Web Docs</a></li>
-              <li><a href="https://css-tricks.com/" target="_blank" rel="noopener noreferrer">CSS-Tricks</a></li>
-              <li><a href="https://www.w3schools.com/" target="_blank" rel="noopener noreferrer">W3Schools</a></li>
-              <li><a href="https://web.dev/" target="_blank" rel="noopener noreferrer">web.dev</a></li>
-              <li><a href="https://fonts.google.com/" target="_blank" rel="noopener noreferrer">Google Fonts</a></li>
-            </ul>
-          </div>
-        </div>
-      </section>
-    </div>
+      <div class="resources">
+        <ul>
+          <li><a href="https://developer.mozilla.org/" target="_blank" rel="noopener noreferrer">MDN Web Docs</a></li>
+          <li><a href="https://css-tricks.com/" target="_blank" rel="noopener noreferrer">CSS Tricks</a></li>
+          <li><a href="https://www.w3schools.com/" target="_blank" rel="noopener noreferrer">W3 Schools</a></li>
+          <li><a href="https://web.dev/" target="_blank" rel="noopener noreferrer">web.dev</a></li>
+          <li><a href="https://fonts.google.com/" target="_blank" rel="noopener noreferrer">Google Fonts</a></li>
+        </ul>
+      </div>
+    </section>
   </main>
 
-  <footer class="site-footer">
-    <p>&copy; <span id="currentyear"></span> Omar Lizandro | Peru</p>
+  <footer>
+    <p>&copy; <span id="currentyear"></span> 🌸 Omar Lizandro 🌸 Peru</p>
     <p id="lastModified"></p>
   </footer>
 </body>
