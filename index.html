@@ -1,19 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en-US">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>WDD 131 – Dynamic Web Fundamentals – Omar Lizandro</title>
   <meta
     name="description"
-    content="WDD 131 – Dynamic Web Fundamentals – Omar Lizandro course landing page with personal information, learning goals, and project links."
+    content="WDD 131 – Dynamic Web Fundamentals – Omar Lizandro home page with personal profile, web development resources, and course project links."
   >
   <meta name="author" content="Omar Lizandro">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Merriweather:wght@700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Roboto+Slab:wght@700&display=swap"
     rel="stylesheet"
   >
 
@@ -48,63 +48,62 @@
         </div>
 
         <div class="card-content card-grid">
-          <div>
+          <div class="card-text">
             <p>
-              I am building a strong foundation in web development through WDD 131.
-              I enjoy learning how structure, design, and accessibility work together
-              to create pages that are clean, useful, and visually consistent.
+              I am building my foundation in web development through WDD 131.
+              I enjoy creating pages that are clean, organized, and easy to use.
             </p>
             <p>
-              My current focus is improving my HTML, CSS, and JavaScript fundamentals,
-              following good development standards, and creating projects that are
-              organized, responsive, and ready for audit and review.
+              My current focus is improving my HTML, CSS, and JavaScript skills
+              while following good development standards, accessibility practices,
+              and responsive design principles.
             </p>
 
+            <h3>Personal Highlights</h3>
             <ul class="info-list">
-              <li><strong>Focus:</strong> Frontend fundamentals</li>
-              <li><strong>Goal:</strong> Build polished, standards-based pages</li>
-              <li><strong>Strength:</strong> Consistency and attention to detail</li>
+              <li><strong>Goal:</strong> Build polished, standards-based websites</li>
+              <li><strong>Interest:</strong> Frontend design and usability</li>
+              <li><strong>Focus:</strong> Clean structure and consistent styling</li>
             </ul>
           </div>
 
           <img
-            src="images/profile-card.svg"
-            alt="Illustration representing a personal profile card"
-            width="800"
-            height="500"
+            src="images/profile.jpg"
+            alt="Portrait of Omar Lizandro"
+            width="500"
+            height="600"
+            class="profile-photo"
           >
         </div>
       </section>
 
       <section class="card">
         <div class="card-header">
-          <h2>Learning Goals</h2>
+          <h2>Web Dev Resources</h2>
         </div>
 
         <div class="card-content card-grid">
           <img
-            src="images/goals-card.svg"
-            alt="Illustration representing web development goals and project work"
+            src="images/resources-card.svg"
+            alt="Illustration representing web development resources and study tools"
             width="800"
             height="500"
             loading="lazy"
           >
 
-          <div>
+          <div class="card-text">
             <p>
-              This page is the starting point for my course work. It will connect to
-              future assignments and to my final project folder as the course progresses.
-            </p>
-            <p>
-              My goal is to create pages that pass technical audits, maintain strong color
-              contrast, use semantic HTML, and deliver a smooth user experience on desktop
-              and smaller screens.
+              These are some helpful resources I can use throughout this course
+              to improve my web development knowledge and project quality.
             </p>
 
-            <ul class="info-list">
-              <li><strong>Design:</strong> Clear alignment and visual hierarchy</li>
-              <li><strong>Accessibility:</strong> Strong contrast and readable structure</li>
-              <li><strong>Performance:</strong> Lightweight local assets</li>
+            <h3>Helpful Links</h3>
+            <ul class="resource-list">
+              <li><a href="https://developer.mozilla.org/" target="_blank" rel="noopener noreferrer">MDN Web Docs</a></li>
+              <li><a href="https://css-tricks.com/" target="_blank" rel="noopener noreferrer">CSS-Tricks</a></li>
+              <li><a href="https://www.w3schools.com/" target="_blank" rel="noopener noreferrer">W3Schools</a></li>
+              <li><a href="https://web.dev/" target="_blank" rel="noopener noreferrer">web.dev</a></li>
+              <li><a href="https://fonts.google.com/" target="_blank" rel="noopener noreferrer">Google Fonts</a></li>
             </ul>
           </div>
         </div>
@@ -113,9 +112,7 @@
   </main>
 
   <footer class="site-footer">
-    <p>
-      &copy; <span id="currentyear"></span> Omar Lizandro | Your Country
-    </p>
+    <p>&copy; <span id="currentyear"></span> Omar Lizandro | Peru</p>
     <p id="lastModified"></p>
   </footer>
 </body>

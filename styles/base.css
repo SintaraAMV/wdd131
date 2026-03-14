@@ -1,15 +1,15 @@
 :root {
-  --background: #f8fafc;
+  --bg: #f8fafc;
   --surface: #ffffff;
-  --surface-muted: #e2e8f0;
+  --border: #dbe3ec;
   --text: #0f172a;
   --text-soft: #334155;
   --primary: #0b3a53;
-  --primary-dark: #072b3d;
+  --primary-dark: #072838;
   --accent: #f4b400;
-  --accent-dark: #b57f00;
+  --accent-soft: #fff1bf;
   --footer: #0f172a;
-  --shadow: 0 12px 32px rgba(15, 23, 42, 0.08);
+  --shadow: 0 12px 28px rgba(15, 23, 42, 0.08);
   --radius: 18px;
   --max-width: 1100px;
 }
@@ -20,13 +20,9 @@
   box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 body {
   margin: 0;
-  background: var(--background);
+  background-color: var(--bg);
   color: var(--text);
   font-family: "Inter", Arial, sans-serif;
   line-height: 1.6;
@@ -52,10 +48,9 @@ a {
 #course-title {
   display: block;
   text-align: center;
-  font-family: "Merriweather", Georgia, serif;
-  font-size: clamp(1.2rem, 2vw + 1rem, 2rem);
+  font-family: "Roboto Slab", Georgia, serif;
+  font-size: clamp(1.25rem, 2vw + 1rem, 2rem);
   font-weight: 700;
-  letter-spacing: 0.2px;
   padding: 1.5rem 1rem 1rem;
 }
 
@@ -68,26 +63,26 @@ a {
 }
 
 .site-nav a {
-  background-color: rgba(255, 255, 255, 0.1);
-  color: #ffffff;
   text-decoration: none;
-  padding: 0.8rem 1.05rem;
-  border-radius: 999px;
   font-weight: 700;
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.12);
   border: 2px solid transparent;
+  border-radius: 999px;
+  padding: 0.85rem 1.1rem;
   transition:
     background-color 0.2s ease,
     color 0.2s ease,
-    transform 0.2s ease,
-    border-color 0.2s ease;
+    border-color 0.2s ease,
+    transform 0.2s ease;
 }
 
 .site-nav a:hover,
 .site-nav a:focus-visible {
   background-color: var(--accent);
   color: #111827;
-  border-color: #fff4bf;
-  transform: translateY(-1px);
+  border-color: var(--accent-soft);
+  transform: translateY(-2px);
 }
 
 .site-nav a:focus-visible {
@@ -104,34 +99,34 @@ a {
 .page h1 {
   margin: 0 0 1.5rem;
   text-align: center;
-  font-family: "Merriweather", Georgia, serif;
-  font-size: clamp(1.8rem, 2vw + 1rem, 2.6rem);
+  font-family: "Roboto Slab", Georgia, serif;
+  font-size: clamp(1.9rem, 2vw + 1rem, 2.7rem);
   color: var(--primary-dark);
 }
 
 .cards {
   display: grid;
   gap: 1.5rem;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: 1fr;
 }
 
 .card {
-  background: var(--surface);
-  border: 1px solid var(--surface-muted);
+  background-color: var(--surface);
+  border: 1px solid var(--border);
   border-radius: var(--radius);
   overflow: hidden;
   box-shadow: var(--shadow);
 }
 
 .card-header {
-  background: var(--primary);
+  background-color: var(--primary);
   color: #ffffff;
   padding: 1rem 1.25rem;
 }
 
 .card-header h2 {
   margin: 0;
-  font-size: 1.25rem;
+  font-size: 1.3rem;
 }
 
 .card-content {
@@ -144,25 +139,53 @@ a {
   align-items: center;
 }
 
-.card p {
+.card-text p {
   margin-top: 0;
   color: var(--text-soft);
 }
 
-.info-list {
-  margin: 1rem 0 0;
+.card h3 {
+  margin: 1rem 0 0.6rem;
+  font-size: 1rem;
+  color: var(--primary-dark);
+}
+
+.info-list,
+.resource-list {
+  margin: 0;
   padding-left: 1.2rem;
 }
 
-.info-list li {
-  margin-bottom: 0.45rem;
+.info-list li,
+.resource-list li {
+  margin-bottom: 0.5rem;
+}
+
+.resource-list a {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.resource-list a:hover,
+.resource-list a:focus-visible {
+  color: var(--primary-dark);
+}
+
+.profile-photo {
+  width: 100%;
+  max-width: 320px;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center;
+  margin: 0 auto;
+  border: 4px solid #e2e8f0;
 }
 
 .site-footer {
-  background: var(--footer);
+  background-color: var(--footer);
   color: #ffffff;
   text-align: center;
-  padding: 1.4rem 1rem 1.8rem;
+  padding: 1.5rem 1rem 1.8rem;
 }
 
 .site-footer p {
@@ -175,21 +198,17 @@ a {
 }
 
 @media (min-width: 760px) {
-  .card-grid {
-    grid-template-columns: 1fr 1fr;
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
   }
 
-  .page {
-    margin-top: 2.5rem;
+  .card-grid {
+    grid-template-columns: 1fr;
   }
 }
 
-@media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
-
-  * {
-    transition: none !important;
+@media (min-width: 1040px) {
+  .card-grid {
+    grid-template-columns: 1fr 1fr;
   }
 }
