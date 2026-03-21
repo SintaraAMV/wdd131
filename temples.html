@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WDD 131 - Temple Album - Omar Lizandro</title>
+  <meta
+    name="description"
+    content="Responsive temple album page for WDD 131 with a mobile hamburger menu and nine temple figures."
+  >
+  <meta name="author" content="Omar Lizandro">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@700&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="styles/temples.css">
+  <link rel="stylesheet" href="styles/temples-large.css">
+  <script src="scripts/temples.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-bar">
+      <span class="site-title">Temple Album</span>
+
+      <button
+        id="menuButton"
+        class="menu-button"
+        type="button"
+        aria-label="Open navigation menu"
+        aria-controls="primaryNav"
+        aria-expanded="false"
+      >
+        ☰
+      </button>
+    </div>
+
+    <nav id="primaryNav" class="navigation" aria-label="Primary navigation">
+      <a href="#">Home</a>
+      <a href="#">Old</a>
+      <a href="#">New</a>
+      <a href="#">Large</a>
+      <a href="#">Small</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Temple Album</h1>
+
+    <div class="album-grid">
+      <figure>
+        <img
+          src="images/cordoba_argentina_temple_1.jpeg"
+          alt="Cordoba Argentina Temple"
+          width="800"
+          height="500"
+          loading="lazy"
+          decoding="async"
+        >
+        <figcaption>Cordoba Argentina Temple</figcaption>
+      </figure>
+
+      <figure>
+        <img
+          src="images/cardston_alberta_temple_2.jpeg"
+          alt="Cardston Alberta Temple"
+          width="800"
+          height="600"
+          loading="lazy"
+          decoding="async"
+        >
+        <figcaption>Cardston Alberta Temple</figcaption>
+      </figure>
+
+      <figure>
+        <img
+          src="images/brussels_belgium_temple_3.jpeg"
+          alt="Brussels Belgium Temple"
+          width="800"
+          height="579"
+          loading="lazy"
+          decoding="async"
+        >
+        <figcaption>Brussels Belgium Temple</figcaption>
+      </figure>
+
+      <figure>
+        <img
+          src="images/brasilia_brazil_temple_4.jpeg"
+          alt="Brasilia Brazil Temple"
+          width="800"
+          height="533"
+          loading="lazy"
+          decoding="async"
+        >
+        <figcaption>Brasilia Brazil Temple</figcaption>
+      </figure>
+
+      <figure>
+        <img
+          src="images/bogota_colombia_temple_5.jpeg"
+          alt="Bogota Colombia Temple"
+          width="800"
+          height="500"
+          loading="lazy"
+          decoding="async"
+        >
+        <figcaption>Bogota Colombia Temple</figcaption>
+      </figure>
+
+      <figure>
+        <img
+          src="images/bern_switzerland_temple_6.jpeg"
+          alt="Bern Switzerland Temple"
+          width="800"
+          height="500"
+          loading="lazy"
+          decoding="async"
+        >
+        <figcaption>Bern Switzerland Temple</figcaption>
+      </figure>
+
+      <figure>
+        <img
+          src="images/auckland_new_zealand_temple_7.jpeg"
+          alt="Auckland New Zealand Temple"
+          width="800"
+          height="533"
+          loading="lazy"
+          decoding="async"
+        >
+        <figcaption>Auckland New Zealand Temple</figcaption>
+      </figure>
+
+      <figure>
+        <img
+          src="images/asuncion_paraguay_temple_8.jpg"
+          alt="Asuncion Paraguay Temple"
+          width="800"
+          height="533"
+          loading="lazy"
+          decoding="async"
+        >
+        <figcaption>Asuncion Paraguay Temple</figcaption>
+      </figure>
+
+      <figure>
+        <img
+          src="images/adelaide_australia_temple_9.jpeg"
+          alt="Adelaide Australia Temple"
+          width="800"
+          height="500"
+          loading="lazy"
+          decoding="async"
+        >
+        <figcaption>Adelaide Australia Temple</figcaption>
+      </figure>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="currentyear"></span> Omar Lizandro | Peru</p>
+    <p id="lastModified"></p>
+  </footer>
+</body>
+</html>
