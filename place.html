@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WDD 131 - Country Page - Lima, Peru - Omar Lizandro</title>
+  <meta
+    name="description"
+    content="Responsive country page about Lima, Peru featuring responsive hero images, weather details, and wind chill calculation."
+  >
+  <meta name="author" content="Omar Lizandro">
+  <link rel="stylesheet" href="styles/place.css">
+  <script src="scripts/place.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <h1>Lima, Peru</h1>
+  </header>
+
+  <main class="page">
+    <div class="hero-wrapper">
+      <picture class="hero">
+        <source srcset="images/hero-large.webp" media="(min-width: 1000px)">
+        <source srcset="images/hero-medium.webp" media="(min-width: 500px)">
+        <img
+          src="images/hero-small.webp"
+          alt="Aerial view of the Costa Verde cliffs and Pacific coastline in Lima, Peru"
+          width="1500"
+          height="750"
+        >
+      </picture>
+
+      <section class="panel data-card" aria-labelledby="data-title">
+        <h2 id="data-title">Data</h2>
+        <div class="panel-body">
+          <p><span class="label">Country:</span> Peru</p>
+          <p><span class="label">Region:</span> Lima Province</p>
+          <p><span class="label">Official Language:</span> Spanish</p>
+          <p><span class="label">Currency:</span> Peruvian Sol (PEN)</p>
+          <p><span class="label">Time Zone:</span> UTC-5</p>
+          <p><span class="label">Calling Code:</span> +51</p>
+          <p><span class="label">Internet TLD:</span> .pe</p>
+        </div>
+      </section>
+
+      <section class="panel weather-card" aria-labelledby="weather-title">
+        <h2 id="weather-title">Weather</h2>
+
+        <img
+          class="weather-icon-mobile"
+          src="images/weather.svg"
+          alt="Partly cloudy weather icon"
+          width="72"
+          height="72"
+        >
+
+        <div class="panel-body weather-details">
+          <p><span class="label">Temperature:</span> <span id="temperature">10 °C</span></p>
+          <p><span class="label">Conditions:</span> Partly Cloudy</p>
+          <p><span class="label">Wind:</span> <span id="windSpeed">12 km/h</span></p>
+          <p><span class="label">Wind Chill:</span> <span id="windchill">Loading...</span></p>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="currentyear"></span> Omar Lizandro | Lima, Peru</p>
+    <p id="lastModified"></p>
+  </footer>
+</body>
+</html>
