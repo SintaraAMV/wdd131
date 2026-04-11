@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WDD 131 - Review Confirmation - Omar Lizandro</title>
+  <meta
+    name="description"
+    content="Product review confirmation page for WDD 131."
+  >
+  <meta name="author" content="Omar Lizandro">
+  <link rel="stylesheet" href="styles/form.css">
+  <script src="scripts/review.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <h1>Review Submitted</h1>
+  </header>
+
+  <main class="page">
+    <section class="review-card">
+      <h2>Thank you for your review!</h2>
+      <p>Your review was submitted successfully.</p>
+
+      <p class="review-counter">
+        Reviews completed: <span id="reviewCount">0</span>
+      </p>
+
+      <section class="summary-section" aria-labelledby="summaryTitle">
+        <h3 id="summaryTitle">Review Summary</h3>
+        <ul id="reviewSummary" class="summary-list"></ul>
+      </section>
+
+      <a class="back-link" href="form.html">Submit another review</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="currentyear"></span> Omar Lizandro | Peru</p>
+    <p id="lastModified"></p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,245 @@
+:root {
+  --primary: #4d1236;
+  --primary-dark: #320b23;
+  --accent: #b48ead;
+  --background: #f6f3f7;
+  --surface: #ffffff;
+  --border: #d8d1d9;
+  --text: #1f1f24;
+  --text-soft: #50505a;
+  --success: #1f6f50;
+  --shadow: 0 10px 24px rgba(31, 31, 36, 0.08);
+  --radius: 14px;
+  --max-width: 780px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--background);
+  color: var(--text);
+}
+
+.site-header {
+  background-color: var(--primary);
+  color: #ffffff;
+  text-align: center;
+  padding: 1.25rem 1rem;
+}
+
+.site-header h1 {
+  margin: 0;
+  font-size: clamp(2rem, 4vw, 2.8rem);
+}
+
+.page {
+  padding: 1.5rem 1rem 2rem;
+}
+
+.review-form,
+.review-card {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
+}
+
+.required-note {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: var(--text-soft);
+  font-size: 0.95rem;
+}
+
+.form-group {
+  margin-bottom: 1.25rem;
+}
+
+label,
+legend {
+  font-weight: 700;
+  color: var(--text);
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.optional {
+  font-weight: 400;
+  color: var(--text-soft);
+}
+
+.required {
+  color: #b00020;
+}
+
+select,
+input[type="date"],
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 0.75rem 0.85rem;
+  border: 1px solid #bdb6bf;
+  border-radius: 10px;
+  font: inherit;
+  background-color: #fff;
+  color: var(--text);
+}
+
+textarea {
+  resize: vertical;
+  min-height: 130px;
+}
+
+fieldset {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1rem;
+}
+
+legend {
+  padding: 0 0.35rem;
+}
+
+.rating-group {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.rating-option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.45rem;
+  text-align: center;
+}
+
+.rating-option label {
+  margin: 0;
+  font-size: 1rem;
+  color: var(--primary);
+}
+
+.checkbox-group {
+  display: grid;
+  gap: 0.65rem;
+  margin-top: 0.5rem;
+}
+
+.checkbox-group label {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin: 0;
+  font-weight: 400;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  accent-color: var(--primary);
+}
+
+.submit-button,
+.back-link {
+  display: inline-block;
+  width: 100%;
+  border: 0;
+  border-radius: 10px;
+  background-color: var(--primary);
+  color: #ffffff;
+  padding: 0.9rem 1rem;
+  font: inherit;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.submit-button:hover,
+.back-link:hover,
+.submit-button:focus-visible,
+.back-link:focus-visible {
+  background-color: var(--primary-dark);
+}
+
+.review-card h2,
+.review-card h3 {
+  margin-top: 0;
+  color: var(--primary);
+}
+
+.review-counter {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--success);
+}
+
+.summary-section {
+  margin: 1.5rem 0;
+}
+
+.summary-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.summary-list li {
+  padding: 0.7rem 0;
+  border-bottom: 1px solid var(--border);
+  color: var(--text-soft);
+}
+
+.summary-list strong {
+  color: var(--text);
+}
+
+.site-footer {
+  background-color: var(--primary-dark);
+  color: #ffffff;
+  text-align: center;
+  padding: 1.15rem 1rem 1.35rem;
+  margin-top: 2rem;
+}
+
+.site-footer p {
+  margin: 0.3rem 0;
+}
+
+#lastModified {
+  color: #f3d7ea;
+  font-weight: 700;
+}
+
+select:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+button:focus-visible,
+a:focus-visible {
+  outline: 3px solid #f2c94c;
+  outline-offset: 2px;
+}
+
+@media (min-width: 700px) {
+  .review-form,
+  .review-card {
+    padding: 2rem;
+  }
+
+  .checkbox-group {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
