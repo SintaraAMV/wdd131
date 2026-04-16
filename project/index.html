@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lima Travel Guide | Home</title>
+  <meta name="description" content="Lima Travel Guide helps visitors explore places, food, and trip planning tips in Lima, Peru.">
+  <meta name="author" content="Omar Lizandro">
+  <link rel="stylesheet" href="styles/site.css">
+  <script src="scripts/main.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html">Lima Travel Guide</a>
+
+      <button
+        id="menuButton"
+        class="menu-button"
+        type="button"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+        aria-controls="primaryNav"
+      >
+        ☰
+      </button>
+
+      <nav id="primaryNav" class="navigation">
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="places.html">Places</a>
+        <a href="food.html">Food</a>
+        <a href="plan.html">Plan</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <picture>
+        <source srcset="images/hero-costa-verde-1600.webp" media="(min-width: 1000px)">
+        <source srcset="images/hero-costa-verde-960.webp" media="(min-width: 640px)">
+        <img
+          src="images/hero-costa-verde-640.webp"
+          alt="View of Costa Verde and the coastline in Lima, Peru"
+          width="1600"
+          height="900"
+        >
+      </picture>
+
+      <div class="hero-content container">
+        <p class="eyebrow">Explore Peru's capital</p>
+        <h1>Discover Lima</h1>
+        <p class="hero-text">
+          Explore coastal views, historic landmarks, local culture, and one of the most
+          celebrated food scenes in South America.
+        </p>
+        <div class="hero-actions">
+          <a class="button" href="places.html">Explore Places</a>
+          <a class="button button-secondary" href="plan.html">Plan Your Visit</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="container section">
+      <h2>Why visit Lima?</h2>
+      <div class="feature-grid">
+        <article class="feature-card">
+          <h3>Coastal scenery</h3>
+          <p>Lima combines cliffs, ocean views, green parks, and urban neighborhoods in one destination.</p>
+        </article>
+        <article class="feature-card">
+          <h3>Historic character</h3>
+          <p>The city includes colonial architecture, major public squares, and important archaeological sites.</p>
+        </article>
+        <article class="feature-card">
+          <h3>Outstanding food</h3>
+          <p>From ceviche to street snacks and modern restaurants, Lima is one of the strongest food destinations in the region.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="container section two-column">
+      <div>
+        <h2>Featured places</h2>
+        <p>
+          Visit the coastal district of Miraflores, the historic center around Plaza Mayor,
+          the archaeological site of Huaca Pucllana, and modern attractions like Larcomar.
+        </p>
+        <a class="text-link" href="places.html">See all featured places</a>
+      </div>
+
+      <div class="highlight-card">
+        <img
+          src="images/plaza-mayor-lima.webp"
+          alt="Plaza Mayor in Lima"
+          width="960"
+          height="640"
+          loading="lazy"
+        >
+        <div class="highlight-card-body">
+          <h3>Historic Center</h3>
+          <p>One of the most iconic parts of Lima for first-time visitors.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <p>&copy; <span id="currentyear"></span> Omar Lizandro | Lima Travel Guide</p>
+      <p id="lastModified"></p>
+      <p><a href="references.html">References</a></p>
+    </div>
+  </footer>
+</body>
+</html>

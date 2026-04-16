@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lima Travel Guide | Places</title>
+  <meta name="description" content="Explore featured places to visit in Lima, Peru, including coastal, historic, and cultural attractions.">
+  <meta name="author" content="Omar Lizandro">
+  <link rel="stylesheet" href="styles/site.css">
+  <script src="scripts/main.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html">Lima Travel Guide</a>
+
+      <button
+        id="menuButton"
+        class="menu-button"
+        type="button"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+        aria-controls="primaryNav"
+      >
+        ☰
+      </button>
+
+      <nav id="primaryNav" class="navigation">
+        <a href="index.html">Home</a>
+        <a href="places.html" aria-current="page">Places</a>
+        <a href="food.html">Food</a>
+        <a href="plan.html">Plan</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container section">
+    <h1>Places to Visit in Lima</h1>
+    <p class="page-intro">
+      Browse featured attractions and filter them by category.
+    </p>
+
+    <div class="filter-bar">
+      <button class="filter-button active" data-filter="all" type="button">All</button>
+      <button class="filter-button" data-filter="coastal" type="button">Coastal</button>
+      <button class="filter-button" data-filter="historic" type="button">Historic</button>
+      <button class="filter-button" data-filter="culture" type="button">Culture</button>
+    </div>
+
+    <section id="placesGrid" class="card-grid" aria-label="Places to visit"></section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <p>&copy; <span id="currentyear"></span> Omar Lizandro | Lima Travel Guide</p>
+      <p id="lastModified"></p>
+      <p><a href="references.html">References</a></p>
+    </div>
+  </footer>
+</body>
+</html>
