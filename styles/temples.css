@@ -39,6 +39,13 @@ header {
     font-family: "Source Serif 4", Georgia, serif;
     font-size: 1.4rem;
     font-weight: 600;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.site-title:hover,
+.site-title:focus-visible {
+    color: var(--gold);
 }
 
 #menu {
@@ -80,7 +87,8 @@ nav a {
 }
 
 nav a:hover,
-nav a:focus-visible {
+nav a:focus-visible,
+nav a.active {
     background-color: var(--navy-soft);
     color: var(--gold);
     outline: none;
@@ -95,13 +103,23 @@ main {
     margin: 1.5rem auto 2.25rem;
 }
 
-main h1 {
+main h1,
+#filter-note {
     grid-column: 1 / -1;
+}
+
+main h1 {
     margin: 0;
     font-family: "Source Serif 4", Georgia, serif;
     font-size: 1.75rem;
     font-weight: 600;
     text-align: center;
+}
+
+#filter-note {
+    margin: 0;
+    text-align: center;
+    color: var(--navy-soft);
 }
 
 figure {
@@ -110,19 +128,95 @@ figure {
     border: 1px solid var(--line);
     border-radius: 10px;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+figure:hover,
+figure:focus-visible {
+    box-shadow: 0 6px 18px rgba(16, 42, 67, 0.16);
+    outline: none;
+}
+
+figure.hidden {
+    display: none;
 }
 
 figure img {
     display: block;
     width: 100%;
+    aspect-ratio: 16 / 10;
     height: auto;
+    object-fit: cover;
+    object-position: center;
 }
 
 figcaption {
-    padding: 0.55rem 0.7rem 0.7rem;
+    min-height: 3.1rem;
+    padding: 0.55rem 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
     font-size: 0.95rem;
     color: var(--navy-soft);
+}
+
+#temple-dialog {
+    width: min(34rem, calc(100% - 2rem));
+    border: 0;
+    border-radius: 12px;
+    padding: 0 1.25rem 1.35rem;
+    color: var(--ink);
+}
+
+#temple-dialog::backdrop {
+    background: rgba(16, 42, 67, 0.55);
+}
+
+#temple-dialog img {
+    display: block;
+    width: calc(100% + 2.5rem);
+    margin: 0 -1.25rem 1rem;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+}
+
+#temple-dialog h2 {
+    margin: 0 2.2rem 0.35rem 0;
+    font-family: "Source Serif 4", Georgia, serif;
+    color: var(--navy);
+}
+
+#temple-dialog p {
+    margin: 0.35rem 0;
+}
+
+#dialog-location,
+#dialog-facts {
+    color: var(--navy-soft);
+    font-size: 0.95rem;
+}
+
+#close-dialog {
+    position: absolute;
+    top: 0.55rem;
+    right: 0.55rem;
+    width: 2.1rem;
+    height: 2.1rem;
+    border: 0;
+    border-radius: 999px;
+    background: var(--navy);
+    color: #ffffff;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+#close-dialog:hover,
+#close-dialog:focus-visible {
+    background: var(--accent);
+    outline: 2px solid var(--gold);
 }
 
 footer {

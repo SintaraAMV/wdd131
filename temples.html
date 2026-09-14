@@ -15,57 +15,67 @@
 </head>
 <body>
     <header>
-        <span class="site-title">Temple Album</span>
+        <a class="site-title" href="temples.html">Temple Album</a>
         <button id="menu" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="primary-nav">☰</button>
         <nav id="primary-nav">
             <a href="index.html">Home</a>
-            <a href="#old">Old</a>
-            <a href="#new">New</a>
-            <a href="#large">Large</a>
-            <a href="#small">Small</a>
+            <a href="#old" data-filter="old">Old</a>
+            <a href="#new" data-filter="new">New</a>
+            <a href="#large" data-filter="large">Large</a>
+            <a href="#small" data-filter="small">Small</a>
         </nav>
     </header>
 
     <main>
-        <h1>Home</h1>
+        <h1 id="page-heading">Home</h1>
+        <p id="filter-note">Select a temple to read its details. Use Old, New, Large, or Small to filter the album.</p>
 
-        <figure>
+        <figure class="temple-card" data-id="cordoba" data-year="2015" data-area="34369">
             <img src="images/cordoba-argentina.webp" alt="Córdoba Argentina Temple with palm trees under a blue sky" width="800" height="500">
             <figcaption>Córdoba Argentina</figcaption>
         </figure>
-        <figure>
+        <figure class="temple-card" data-id="cardston" data-year="1923" data-area="88562">
             <img src="images/cardston-alberta.webp" alt="Cardston Alberta Temple lit at dusk with a formal garden in front" width="800" height="600">
             <figcaption>Cardston Alberta</figcaption>
         </figure>
-        <figure>
+        <figure class="temple-card" data-id="brussels" data-year="2026" data-area="25500">
             <img src="images/brussels-belgium.webp" alt="Rendering of the Brussels Belgium Temple on a city corner" width="800" height="580">
             <figcaption>Brussels Belgium</figcaption>
         </figure>
-        <figure>
+        <figure class="temple-card" data-id="brasilia" data-year="2023" data-area="25000">
             <img src="images/brasilia-brazil.webp" alt="Brasília Brazil Temple glowing at twilight with reflecting pools" width="800" height="534">
             <figcaption>Brasília Brazil</figcaption>
         </figure>
-        <figure>
+        <figure class="temple-card" data-id="bogota" data-year="1999" data-area="53500">
             <img src="images/bogota-colombia.webp" alt="Bogotá Colombia Temple with arched walkway against a blue sky" width="800" height="500">
             <figcaption>Bogotá Colombia</figcaption>
         </figure>
-        <figure>
+        <figure class="temple-card" data-id="bern" data-year="1955" data-area="35546">
             <img src="images/bern-switzerland.webp" alt="Bern Switzerland Temple behind circular flower beds" width="800" height="500">
             <figcaption>Bern Switzerland</figcaption>
         </figure>
-        <figure>
+        <figure class="temple-card" data-id="auckland" data-year="2025" data-area="45456">
             <img src="images/auckland-new-zealand.webp" alt="Auckland New Zealand Temple on a hillside at sunset" width="800" height="534">
             <figcaption>Auckland New Zealand</figcaption>
         </figure>
-        <figure>
+        <figure class="temple-card" data-id="asuncion" data-year="2002" data-area="11906">
             <img src="images/asuncion-paraguay.webp" alt="Asunción Paraguay Temple entrance with palms and a central walkway" width="800" height="534">
             <figcaption>Asunción Paraguay</figcaption>
         </figure>
-        <figure>
+        <figure class="temple-card" data-id="adelaide" data-year="2000" data-area="10700">
             <img src="images/adelaide-australia.webp" alt="Adelaide Australia Temple with Moroni statue and garden trees" width="800" height="500">
             <figcaption>Adelaide Australia</figcaption>
         </figure>
     </main>
+
+    <dialog id="temple-dialog" aria-labelledby="dialog-title">
+        <button id="close-dialog" type="button" aria-label="Close temple details">✕</button>
+        <img id="dialog-image" src="" alt="">
+        <h2 id="dialog-title"></h2>
+        <p id="dialog-location"></p>
+        <p id="dialog-facts"></p>
+        <p id="dialog-description"></p>
+    </dialog>
 
     <footer>
         <p>&copy; <span id="currentyear"></span> Omar Lizandro Meza Ramirez · El Salvador</p>
