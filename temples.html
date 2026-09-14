@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 131 – Temple Album – Omar Lizandro Meza Ramirez</title>
+    <meta name="description" content="WDD 131 Temple Album by Omar Lizandro Meza Ramirez. Responsive picture gallery of Latter-day Saint temples with a hamburger menu, CSS Grid, and JavaScript.">
+    <meta name="author" content="Omar Lizandro Meza Ramirez">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/temples.css">
+    <link rel="stylesheet" href="styles/temples-large.css" media="screen and (min-width: 720px)">
+    <script src="scripts/temples.js" defer></script>
+</head>
+<body>
+    <header>
+        <span class="site-title">Temple Album</span>
+        <button id="menu" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="primary-nav">☰</button>
+        <nav id="primary-nav">
+            <a href="index.html">Home</a>
+            <a href="#old">Old</a>
+            <a href="#new">New</a>
+            <a href="#large">Large</a>
+            <a href="#small">Small</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Home</h1>
+
+        <figure>
+            <img src="images/cordoba-argentina.webp" alt="Córdoba Argentina Temple with palm trees under a blue sky" width="800" height="500">
+            <figcaption>Córdoba Argentina</figcaption>
+        </figure>
+        <figure>
+            <img src="images/cardston-alberta.webp" alt="Cardston Alberta Temple lit at dusk with a formal garden in front" width="800" height="600">
+            <figcaption>Cardston Alberta</figcaption>
+        </figure>
+        <figure>
+            <img src="images/brussels-belgium.webp" alt="Rendering of the Brussels Belgium Temple on a city corner" width="800" height="580">
+            <figcaption>Brussels Belgium</figcaption>
+        </figure>
+        <figure>
+            <img src="images/brasilia-brazil.webp" alt="Brasília Brazil Temple glowing at twilight with reflecting pools" width="800" height="534">
+            <figcaption>Brasília Brazil</figcaption>
+        </figure>
+        <figure>
+            <img src="images/bogota-colombia.webp" alt="Bogotá Colombia Temple with arched walkway against a blue sky" width="800" height="500">
+            <figcaption>Bogotá Colombia</figcaption>
+        </figure>
+        <figure>
+            <img src="images/bern-switzerland.webp" alt="Bern Switzerland Temple behind circular flower beds" width="800" height="500">
+            <figcaption>Bern Switzerland</figcaption>
+        </figure>
+        <figure>
+            <img src="images/auckland-new-zealand.webp" alt="Auckland New Zealand Temple on a hillside at sunset" width="800" height="534">
+            <figcaption>Auckland New Zealand</figcaption>
+        </figure>
+        <figure>
+            <img src="images/asuncion-paraguay.webp" alt="Asunción Paraguay Temple entrance with palms and a central walkway" width="800" height="534">
+            <figcaption>Asunción Paraguay</figcaption>
+        </figure>
+        <figure>
+            <img src="images/adelaide-australia.webp" alt="Adelaide Australia Temple with Moroni statue and garden trees" width="800" height="500">
+            <figcaption>Adelaide Australia</figcaption>
+        </figure>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> Omar Lizandro Meza Ramirez · El Salvador</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>

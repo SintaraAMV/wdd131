@@ -1,0 +1,138 @@
+/* WDD 131 – Temple Album (mobile first)
+   Omar Lizandro Meza Ramirez */
+
+:root {
+    --navy: #102a43;
+    --navy-soft: #243b53;
+    --ink: #102a43;
+    --paper: #f7f3ec;
+    --card: #ffffff;
+    --accent: #0f5c56;
+    --gold: #e9c46a;
+    --line: #d9cfc0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Outfit", Arial, sans-serif;
+    font-size: 1.05rem;
+    line-height: 1.5;
+    color: var(--ink);
+    background-color: var(--paper);
+}
+
+header {
+    background-color: var(--navy);
+    color: #ffffff;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.65rem 1rem;
+}
+
+.site-title {
+    font-family: "Source Serif 4", Georgia, serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+#menu {
+    display: block;
+    background: transparent;
+    border: 0;
+    color: #ffffff;
+    font-size: 1.85rem;
+    line-height: 1;
+    cursor: pointer;
+    padding: 0.15rem 0.35rem;
+}
+
+#menu:hover,
+#menu:focus-visible {
+    color: var(--gold);
+    outline: 2px solid var(--gold);
+    outline-offset: 2px;
+}
+
+nav {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 0.35rem;
+}
+
+nav.open {
+    display: flex;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    text-align: center;
+    font-weight: 600;
+    padding: 0.7rem 0.5rem;
+    border-bottom: 1px solid #3d556b;
+}
+
+nav a:hover,
+nav a:focus-visible {
+    background-color: var(--navy-soft);
+    color: var(--gold);
+    outline: none;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    width: min(1100px, calc(100% - 2rem));
+    max-width: 1100px;
+    margin: 1.5rem auto 2.25rem;
+}
+
+main h1 {
+    grid-column: 1 / -1;
+    margin: 0;
+    font-family: "Source Serif 4", Georgia, serif;
+    font-size: 1.75rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+figure {
+    margin: 0;
+    background-color: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+figure img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+figcaption {
+    padding: 0.55rem 0.7rem 0.7rem;
+    text-align: center;
+    font-size: 0.95rem;
+    color: var(--navy-soft);
+}
+
+footer {
+    background-color: var(--navy);
+    color: #ffffff;
+    text-align: center;
+    padding: 1.1rem 1rem 1.25rem;
+}
+
+footer p {
+    margin: 0.25rem 0;
+    font-size: 0.95rem;
+}
