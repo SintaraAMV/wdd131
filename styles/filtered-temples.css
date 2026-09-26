@@ -1,0 +1,200 @@
+/* WDD 131 – Filtered Temple Album
+   Omar Lizandro Meza Ramirez */
+
+:root {
+    --navy: #102a43;
+    --navy-soft: #243b53;
+    --ink: #102a43;
+    --paper: #f7f3ec;
+    --card: #ffffff;
+    --gold: #e9c46a;
+    --line: #d9cfc0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Outfit", Arial, sans-serif;
+    font-size: 1.05rem;
+    line-height: 1.5;
+    color: var(--ink);
+    background-color: var(--paper);
+}
+
+header {
+    background-color: var(--navy);
+    color: #ffffff;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.65rem 1rem;
+}
+
+.site-title {
+    font-family: "Source Serif 4", Georgia, serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+#menu {
+    display: block;
+    background: transparent;
+    border: 0;
+    color: #ffffff;
+    font-size: 1.85rem;
+    line-height: 1;
+    cursor: pointer;
+    padding: 0.15rem 0.35rem;
+}
+
+#menu:hover,
+#menu:focus-visible {
+    color: var(--gold);
+    outline: 2px solid var(--gold);
+    outline-offset: 2px;
+}
+
+nav {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 0.35rem;
+}
+
+nav.open {
+    display: flex;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    text-align: center;
+    font-weight: 600;
+    padding: 0.7rem 0.5rem;
+    border-bottom: 1px solid #3d556b;
+}
+
+nav a:hover,
+nav a:focus-visible,
+nav a.active {
+    background-color: var(--navy-soft);
+    color: var(--gold);
+    outline: none;
+}
+
+main {
+    width: min(1100px, calc(100% - 2rem));
+    max-width: 1100px;
+    margin: 1.5rem auto 2.25rem;
+}
+
+h1 {
+    margin: 0 0 1.15rem;
+    font-family: "Source Serif 4", Georgia, serif;
+    font-size: 1.75rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+#album {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+}
+
+figure {
+    margin: 0;
+    background-color: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+figure img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+}
+
+figcaption {
+    padding: 0.75rem 0.85rem 0.95rem;
+}
+
+figcaption h2 {
+    margin: 0 0 0.35rem;
+    font-family: "Source Serif 4", Georgia, serif;
+    font-size: 1.15rem;
+    color: var(--navy);
+}
+
+figcaption p {
+    margin: 0.2rem 0;
+    font-size: 0.95rem;
+    color: var(--navy-soft);
+}
+
+footer {
+    background-color: var(--navy);
+    color: #ffffff;
+    text-align: center;
+    padding: 1.1rem 1rem 1.25rem;
+}
+
+footer p {
+    margin: 0.25rem 0;
+    font-size: 0.95rem;
+}
+
+@media screen and (min-width: 32rem) {
+    #menu {
+        display: none;
+    }
+
+    header {
+        flex-wrap: nowrap;
+        padding: 0.35rem 1.25rem 0.35rem 1.5rem;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: row;
+        flex: 1 1 auto;
+        width: auto;
+        margin-top: 0;
+        justify-content: flex-end;
+    }
+
+    nav a {
+        border-bottom: 3px solid transparent;
+        padding: 0.85rem 0.95rem;
+    }
+
+    nav a:hover,
+    nav a:focus-visible,
+    nav a.active {
+        border-bottom-color: var(--gold);
+    }
+
+    #album {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (min-width: 50rem) {
+    #album {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
