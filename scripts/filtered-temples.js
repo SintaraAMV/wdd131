@@ -115,8 +115,12 @@ function matchesFilter(temple, filter) {
     return true;
 }
 
+const dialog = document.querySelector("#temple-dialog");
+const closeDialogButton = document.querySelector("#close-dialog");
+
 function createTempleCard(temple) {
-    return `<figure>
+    const index = temples.indexOf(temple);
+    return `<figure class="temple-card" data-index="${index}" tabindex="0">
         <img src="${temple.imageUrl}" alt="${temple.templeName} Temple" width="400" height="250" loading="lazy">
         <figcaption>
             <h2>${temple.templeName}</h2>
@@ -127,10 +131,39 @@ function createTempleCard(temple) {
     </figure>`;
 }
 
+function openTemple(temple) {
+    if (!dialog || !temple) {
+        return;
+    }
+
+    const dialogImage = document.querySelector("#dialog-image");
+    dialogImage.src = temple.imageUrl;
+    dialogImage.alt = `${temple.templeName} Temple`;
+    document.querySelector("#dialog-title").textContent = temple.templeName;
+    document.querySelector("#dialog-location").textContent = `Location: ${temple.location}`;
+    document.querySelector("#dialog-dedicated").textContent = `Dedicated: ${temple.dedicated}`;
+    document.querySelector("#dialog-area").textContent = `Area: ${temple.area.toLocaleString()} sq ft`;
+    dialog.showModal();
+}
+
+function wireCardClicks() {
+    document.querySelectorAll(".temple-card").forEach((card) => {
+        const temple = temples[Number(card.dataset.index)];
+        card.addEventListener("click", () => openTemple(temple));
+        card.addEventListener("keydown", (event) => {
+            if (event.key === "Enter" || event.key === " ") {
+                event.preventDefault();
+                openTemple(temple);
+            }
+        });
+    });
+}
+
 function displayTemples(filter = "home") {
     const list = temples.filter((temple) => matchesFilter(temple, filter));
     album.innerHTML = list.map(createTempleCard).join("");
     heading.textContent = filterLabels[filter] || "Home";
+    wireCardClicks();
 
     document.querySelectorAll("#primary-nav [data-filter]").forEach((link) => {
         link.classList.toggle("active", link.dataset.filter === filter);
@@ -170,6 +203,15 @@ document.querySelectorAll("#primary-nav [data-filter]").forEach((link) => {
         }
     });
 });
+
+if (closeDialogButton && dialog) {
+    closeDialogButton.addEventListener("click", () => dialog.close());
+    dialog.addEventListener("click", (event) => {
+        if (event.target === dialog) {
+            dialog.close();
+        }
+    });
+}
 
 const startingFilter = window.location.hash.replace("#", "");
 displayTemples(["home", "old", "new", "large", "small"].includes(startingFilter) ? startingFilter : "home");

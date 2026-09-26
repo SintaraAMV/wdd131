@@ -114,6 +114,15 @@ figure {
     overflow: hidden;
     display: flex;
     flex-direction: column;
+    cursor: pointer;
+}
+
+figure:hover,
+figure:focus-visible {
+    box-shadow: 0 8px 20px rgba(16, 42, 67, 0.18);
+    transform: translateY(-2px);
+    outline: 2px solid var(--navy);
+    outline-offset: 2px;
 }
 
 figure img {
@@ -140,6 +149,57 @@ figcaption p {
     margin: 0.2rem 0;
     font-size: 0.95rem;
     color: var(--navy-soft);
+}
+
+#temple-dialog {
+    width: min(34rem, calc(100% - 2rem));
+    border: 0;
+    border-radius: 12px;
+    padding: 0 1.25rem 1.35rem;
+    color: var(--ink);
+}
+
+#temple-dialog::backdrop {
+    background: rgba(16, 42, 67, 0.55);
+}
+
+#temple-dialog img {
+    display: block;
+    width: calc(100% + 2.5rem);
+    margin: 0 -1.25rem 1rem;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+}
+
+#temple-dialog h2 {
+    margin: 0 2.2rem 0.4rem 0;
+    font-family: "Source Serif 4", Georgia, serif;
+    color: var(--navy);
+}
+
+#temple-dialog p {
+    margin: 0.3rem 0;
+    color: var(--navy-soft);
+}
+
+#close-dialog {
+    position: absolute;
+    top: 0.55rem;
+    right: 0.55rem;
+    width: 2.1rem;
+    height: 2.1rem;
+    border: 0;
+    border-radius: 999px;
+    background: var(--navy);
+    color: #ffffff;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+#close-dialog:hover,
+#close-dialog:focus-visible {
+    background: var(--navy-soft);
+    outline: 2px solid var(--gold);
 }
 
 footer {
