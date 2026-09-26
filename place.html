@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 131 – El Salvador – Omar Lizandro Meza Ramirez</title>
+    <meta name="description" content="WDD 131 Country Page about El Salvador by Omar Lizandro Meza Ramirez. Data, weather, hero images, and wind chill.">
+    <meta name="author" content="Omar Lizandro Meza Ramirez">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/place.css">
+    <script src="scripts/place.js" defer></script>
+</head>
+<body>
+    <header>
+        <span class="site-title">El Salvador</span>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="temples.html">Temples</a>
+            <a href="place.html" aria-current="page">Place</a>
+            <a href="project/">Project</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>El Salvador</h1>
+
+        <picture class="hero">
+            <source srcset="images/salvador-wide.webp" media="(min-width: 720px)" type="image/webp">
+            <img src="images/salvador-small.webp"
+                 srcset="images/salvador-small.webp 600w, images/salvador-wide.webp 1200w"
+                 sizes="(max-width: 719px) 100vw, 1100px"
+                 alt="Colonial rooftops and a white church in front of a green volcano in El Salvador"
+                 width="600"
+                 height="402">
+        </picture>
+
+        <section class="data-card" aria-labelledby="data-heading">
+            <h2 id="data-heading">Data</h2>
+            <dl>
+                <div>
+                    <dt>Area</dt>
+                    <dd>21,041 km²</dd>
+                </div>
+                <div>
+                    <dt>Population</dt>
+                    <dd>6.3 million</dd>
+                </div>
+                <div>
+                    <dt>Capital</dt>
+                    <dd>San Salvador</dd>
+                </div>
+                <div>
+                    <dt>Languages</dt>
+                    <dd>Spanish</dd>
+                </div>
+                <div>
+                    <dt>Currency</dt>
+                    <dd>United States Dollar</dd>
+                </div>
+                <div>
+                    <dt>Time Zone</dt>
+                    <dd>CST (UTC-6)</dd>
+                </div>
+            </dl>
+        </section>
+
+        <section class="weather-card" aria-labelledby="weather-heading">
+            <h2 id="weather-heading">Weather</h2>
+            <img class="weather-svg" src="images/weather.svg" alt="Partly cloudy weather icon" width="72" height="72">
+            <dl>
+                <div>
+                    <dt>Temperature</dt>
+                    <dd>9 °C</dd>
+                </div>
+                <div>
+                    <dt>Conditions</dt>
+                    <dd>Cool highland morning</dd>
+                </div>
+                <div>
+                    <dt>Wind</dt>
+                    <dd>18 km/h</dd>
+                </div>
+                <div>
+                    <dt>Wind Chill</dt>
+                    <dd id="windchill"></dd>
+                </div>
+            </dl>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> Omar Lizandro Meza Ramirez · El Salvador</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>

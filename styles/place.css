@@ -1,0 +1,170 @@
+/* WDD 131 – Country Page: El Salvador
+   Omar Lizandro Meza Ramirez */
+
+:root {
+    --navy: #0b3a6e;
+    --navy-soft: #1a4f8a;
+    --ink: #102a43;
+    --paper: #f4f7fb;
+    --card: #ffffff;
+    --accent: #0f5c56;
+    --gold: #e9c46a;
+    --line: #c9d6e5;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Outfit", Arial, sans-serif;
+    font-size: 1.05rem;
+    line-height: 1.55;
+    color: var(--ink);
+    background-color: var(--paper);
+}
+
+header {
+    background-color: var(--navy);
+    color: #ffffff;
+}
+
+.site-title {
+    display: block;
+    font-family: "Source Serif 4", Georgia, serif;
+    font-size: 1.45rem;
+    font-weight: 600;
+    text-align: center;
+    padding: 0.85rem 1rem 0.55rem;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+nav a {
+    flex: 1 1 auto;
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.7rem 0.6rem;
+    border-bottom: 3px solid transparent;
+}
+
+nav a:hover,
+nav a:focus-visible,
+nav a[aria-current="page"] {
+    background-color: var(--navy-soft);
+    color: var(--gold);
+    border-bottom-color: var(--gold);
+    outline: none;
+}
+
+main {
+    width: min(1100px, calc(100% - 2rem));
+    max-width: 1100px;
+    margin: 1.4rem auto 2.2rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+}
+
+h1 {
+    margin: 0;
+    font-family: "Source Serif 4", Georgia, serif;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.hero img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.data-card,
+.weather-card {
+    background-color: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 1rem 1.1rem 1.15rem;
+}
+
+h2 {
+    margin: 0 0 0.75rem;
+    font-family: "Source Serif 4", Georgia, serif;
+    font-size: 1.35rem;
+    color: var(--navy);
+}
+
+.weather-svg {
+    display: block;
+    width: 72px;
+    height: 72px;
+    margin: 0 auto 0.75rem;
+}
+
+dl {
+    margin: 0;
+}
+
+dl div {
+    display: grid;
+    grid-template-columns: 8.5rem 1fr;
+    gap: 0.5rem;
+    padding: 0.4rem 0;
+    border-bottom: 1px solid var(--line);
+}
+
+dl div:last-child {
+    border-bottom: 0;
+}
+
+dt {
+    font-weight: 600;
+    color: var(--navy);
+}
+
+dd {
+    margin: 0;
+}
+
+footer {
+    background-color: var(--navy);
+    color: #ffffff;
+    text-align: center;
+    padding: 1.1rem 1rem;
+}
+
+footer p {
+    margin: 0.25rem 0;
+    font-size: 0.95rem;
+}
+
+@media screen and (min-width: 720px) {
+    .site-title {
+        font-size: 1.65rem;
+    }
+
+    main {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    h1,
+    .hero {
+        grid-column: 1 / -1;
+    }
+
+    .weather-svg {
+        display: none;
+    }
+
+    .weather-card h2::after {
+        content: " ⛅";
+    }
+}
