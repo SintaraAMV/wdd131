@@ -31,7 +31,8 @@
         .heading-sample { font-family: "Source Serif 4", Georgia, serif; font-size: 1.35rem; }
         .body-sample { font-family: "Outfit", Arial, sans-serif; }
         figure { margin: 1rem 0 0; }
-        figure img { display: block; width: 100%; height: auto; border: 1px solid #d9cfc0; }
+        figure img, figure svg { display: block; width: 100%; height: auto; border: 1px solid #d9cfc0; background-color: #f4f1ea; }
+        figure.mobile svg { max-width: 360px; }
         footer { background-color: #102a43; color: #ffffff; text-align: center; padding: 1rem; }
     </style>
 </head>
@@ -105,12 +106,64 @@
         <section>
             <h2>Wireframes</h2>
             <p>Both sketches are for the project home page. They show layout only, not final content.</p>
-            <figure>
-                <img src="images/wireframe-home-mobile.svg" alt="Mobile wireframe of the Temple Paths home page with stacked cards" width="360" height="720">
+            <figure class="mobile">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 720" role="img" aria-label="Mobile wireframe of the Temple Paths home page">
+                    <rect width="360" height="720" fill="#f4f1ea"/>
+                    <rect x="28" y="16" width="304" height="688" rx="18" fill="#ffffff" stroke="#102a43" stroke-width="3"/>
+                    <rect x="28" y="16" width="304" height="64" fill="#102a43"/>
+                    <rect x="46" y="36" width="120" height="14" rx="3" fill="#e9c46a"/>
+                    <rect x="286" y="34" width="28" height="4" fill="#ffffff"/>
+                    <rect x="286" y="42" width="28" height="4" fill="#ffffff"/>
+                    <rect x="286" y="50" width="28" height="4" fill="#ffffff"/>
+                    <text x="46" y="110" fill="#102a43" font-family="Georgia, serif" font-size="16">Home heading</text>
+                    <rect x="46" y="124" width="268" height="120" rx="6" fill="#d9cfc0" stroke="#102a43"/>
+                    <text x="132" y="190" fill="#102a43" font-family="Arial, sans-serif" font-size="14">Hero image</text>
+                    <rect x="46" y="260" width="268" height="88" rx="6" fill="#ffffff" stroke="#102a43"/>
+                    <rect x="58" y="272" width="72" height="48" fill="#d9cfc0"/>
+                    <text x="140" y="292" fill="#102a43" font-family="Arial, sans-serif" font-size="13">Temple card</text>
+                    <text x="140" y="312" fill="#243b53" font-family="Arial, sans-serif" font-size="11">name, country</text>
+                    <rect x="46" y="360" width="268" height="88" rx="6" fill="#ffffff" stroke="#102a43"/>
+                    <rect x="58" y="372" width="72" height="48" fill="#d9cfc0"/>
+                    <text x="140" y="392" fill="#102a43" font-family="Arial, sans-serif" font-size="13">Temple card</text>
+                    <text x="140" y="412" fill="#243b53" font-family="Arial, sans-serif" font-size="11">name, country</text>
+                    <rect x="46" y="460" width="268" height="88" rx="6" fill="#ffffff" stroke="#102a43"/>
+                    <rect x="58" y="472" width="72" height="48" fill="#d9cfc0"/>
+                    <text x="140" y="492" fill="#102a43" font-family="Arial, sans-serif" font-size="13">Temple card</text>
+                    <text x="140" y="512" fill="#243b53" font-family="Arial, sans-serif" font-size="11">name, country</text>
+                    <rect x="46" y="568" width="268" height="36" rx="6" fill="#e9c46a" stroke="#102a43"/>
+                    <text x="118" y="591" fill="#102a43" font-family="Arial, sans-serif" font-size="13">Plan a visit</text>
+                    <rect x="28" y="640" width="304" height="64" fill="#102a43"/>
+                    <text x="118" y="678" fill="#ffffff" font-family="Arial, sans-serif" font-size="12">Footer</text>
+                </svg>
                 <figcaption>Home page, mobile view: header with menu button, hero, stacked temple cards, and a plan-a-visit link.</figcaption>
             </figure>
             <figure>
-                <img src="images/wireframe-home-desktop.svg" alt="Desktop wireframe of the Temple Paths home page with three cards in a row" width="960" height="560">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 560" role="img" aria-label="Desktop wireframe of the Temple Paths home page">
+                    <rect width="960" height="560" fill="#f4f1ea"/>
+                    <rect x="16" y="16" width="928" height="528" fill="#ffffff" stroke="#102a43" stroke-width="3"/>
+                    <rect x="16" y="16" width="928" height="64" fill="#102a43"/>
+                    <rect x="36" y="38" width="150" height="16" rx="3" fill="#e9c46a"/>
+                    <text x="560" y="54" fill="#ffffff" font-family="Arial, sans-serif" font-size="14">Home</text>
+                    <text x="640" y="54" fill="#ffffff" font-family="Arial, sans-serif" font-size="14">Temples</text>
+                    <text x="740" y="54" fill="#e9c46a" font-family="Arial, sans-serif" font-size="14">Plan a Visit</text>
+                    <text x="40" y="116" fill="#102a43" font-family="Georgia, serif" font-size="22">Home heading</text>
+                    <rect x="40" y="132" width="880" height="150" rx="6" fill="#d9cfc0" stroke="#102a43"/>
+                    <text x="420" y="214" fill="#102a43" font-family="Arial, sans-serif" font-size="16">Hero image</text>
+                    <rect x="40" y="304" width="276" height="150" rx="6" fill="#ffffff" stroke="#102a43"/>
+                    <rect x="52" y="316" width="252" height="70" fill="#d9cfc0"/>
+                    <text x="120" y="412" fill="#102a43" font-family="Arial, sans-serif" font-size="14">Featured temple</text>
+                    <text x="128" y="432" fill="#243b53" font-family="Arial, sans-serif" font-size="12">name, country</text>
+                    <rect x="342" y="304" width="276" height="150" rx="6" fill="#ffffff" stroke="#102a43"/>
+                    <rect x="354" y="316" width="252" height="70" fill="#d9cfc0"/>
+                    <text x="422" y="412" fill="#102a43" font-family="Arial, sans-serif" font-size="14">Featured temple</text>
+                    <text x="430" y="432" fill="#243b53" font-family="Arial, sans-serif" font-size="12">name, country</text>
+                    <rect x="644" y="304" width="276" height="150" rx="6" fill="#ffffff" stroke="#102a43"/>
+                    <rect x="656" y="316" width="252" height="70" fill="#d9cfc0"/>
+                    <text x="724" y="412" fill="#102a43" font-family="Arial, sans-serif" font-size="14">Featured temple</text>
+                    <text x="732" y="432" fill="#243b53" font-family="Arial, sans-serif" font-size="12">name, country</text>
+                    <rect x="16" y="480" width="928" height="64" fill="#102a43"/>
+                    <text x="430" y="518" fill="#ffffff" font-family="Arial, sans-serif" font-size="14">Footer</text>
+                </svg>
                 <figcaption>Home page, larger view: horizontal navigation, wide hero, and three featured temple cards in one row.</figcaption>
             </figure>
         </section>
