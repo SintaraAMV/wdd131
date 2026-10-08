@@ -1,0 +1,160 @@
+/* WDD 131 site plan. Colors and fonts listed in the document are applied here. */
+
+:root {
+    --navy: #102a43;
+    --paper: #f7f3ec;
+    --gold: #e9c46a;
+    --ink: #102a43;
+    --card: #ffffff;
+    --line: #d9cfc0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Outfit", Arial, sans-serif;
+    font-size: 1.05rem;
+    line-height: 1.55;
+    color: var(--ink);
+    background-color: var(--paper);
+}
+
+header {
+    background-color: var(--navy);
+    color: #ffffff;
+    padding: 1.25rem 1rem;
+}
+
+header p,
+footer p {
+    margin: 0.25rem 0;
+}
+
+h1,
+h2,
+h3,
+.site-name {
+    font-family: "Source Serif 4", Georgia, serif;
+    color: var(--navy);
+}
+
+.site-name {
+    margin: 0;
+    color: #ffffff;
+    font-size: 2rem;
+}
+
+.tagline {
+    color: var(--gold);
+    font-weight: 600;
+}
+
+main {
+    width: min(860px, calc(100% - 2rem));
+    margin: 1.5rem auto 2rem;
+}
+
+section {
+    background-color: var(--card);
+    border: 1px solid var(--line);
+    border-top: 4px solid var(--gold);
+    border-radius: 8px;
+    padding: 1rem 1.1rem 1.15rem;
+    margin: 0 0 1rem;
+}
+
+h2 {
+    margin: 0 0 0.6rem;
+    font-size: 1.45rem;
+}
+
+ul {
+    margin: 0.4rem 0 0;
+    padding-left: 1.2rem;
+}
+
+.swatches {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 0.8rem;
+}
+
+.swatch {
+    width: 9.5rem;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    overflow: hidden;
+    background-color: var(--card);
+}
+
+.swatch span {
+    display: block;
+    height: 3.2rem;
+}
+
+.swatch p {
+    margin: 0;
+    padding: 0.4rem 0.5rem;
+    font-size: 0.9rem;
+}
+
+.navy {
+    background-color: #102a43;
+}
+
+.paper {
+    background-color: #f7f3ec;
+    border-bottom: 1px solid var(--line);
+}
+
+.gold {
+    background-color: #e9c46a;
+}
+
+.font-sample {
+    margin: 0.7rem 0 0;
+    padding: 0.7rem 0.8rem;
+    background-color: var(--paper);
+    border-left: 4px solid var(--navy);
+}
+
+.font-sample.heading-sample {
+    font-family: "Source Serif 4", Georgia, serif;
+    font-size: 1.35rem;
+}
+
+.font-sample.body-sample {
+    font-family: "Outfit", Arial, sans-serif;
+}
+
+figure {
+    margin: 1rem 0 0;
+}
+
+figure img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border: 1px solid var(--line);
+    background-color: var(--paper);
+}
+
+figcaption {
+    margin-top: 0.35rem;
+    font-size: 0.95rem;
+}
+
+footer {
+    background-color: var(--navy);
+    color: #ffffff;
+    text-align: center;
+    padding: 1rem;
+}
+
+footer a {
+    color: var(--gold);
+}
