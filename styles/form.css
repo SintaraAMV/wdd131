@@ -1,0 +1,158 @@
+:root {
+    --navy: #102a43;
+    --paper: #f7f3ec;
+    --gold: #b8860b;
+    --ink: #102a43;
+    --card: #ffffff;
+    --line: #d9cfc0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Outfit", Arial, sans-serif;
+    font-size: 1.05rem;
+    line-height: 1.5;
+    color: var(--ink);
+    background-color: var(--paper);
+}
+
+header {
+    background-color: var(--navy);
+    color: #ffffff;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    padding: 0.8rem 1rem;
+}
+
+.site-title {
+    margin: 0;
+    font-family: "Source Serif 4", Georgia, serif;
+    font-size: 1.4rem;
+}
+
+nav {
+    display: flex;
+    gap: 0.4rem;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.35rem 0.55rem;
+}
+
+nav a:hover,
+nav a:focus-visible,
+nav a[aria-current="page"] {
+    color: #f6e27a;
+}
+
+main {
+    width: min(40rem, calc(100% - 2rem));
+    margin: 1.5rem auto 2rem;
+}
+
+h1 {
+    margin: 0 0 0.4rem;
+    font-family: "Source Serif 4", Georgia, serif;
+    font-size: 1.8rem;
+    color: var(--navy);
+}
+
+.intro {
+    margin: 0 0 1rem;
+}
+
+form,
+main > p {
+    background-color: var(--card);
+}
+
+form {
+    border: 1px solid var(--line);
+    border-top: 4px solid var(--gold);
+    border-radius: 10px;
+    padding: 1rem 1rem 1.2rem;
+    display: grid;
+    gap: 0.45rem;
+}
+
+label,
+legend {
+    font-weight: 600;
+    color: var(--navy);
+}
+
+input[type="text"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    font: inherit;
+    color: var(--ink);
+    background-color: #ffffff;
+    border: 1px solid #8aa0b4;
+    border-radius: 6px;
+    padding: 0.55rem 0.65rem;
+}
+
+fieldset {
+    margin: 0.4rem 0;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 0.7rem 0.8rem 0.85rem;
+}
+
+.stars,
+.checks {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.55rem 0.9rem;
+}
+
+.stars label {
+    font-size: 1.05rem;
+    letter-spacing: 0.04em;
+}
+
+input[type="submit"] {
+    margin-top: 0.6rem;
+    justify-self: start;
+    font: inherit;
+    font-weight: 700;
+    color: #102a43;
+    background-color: #f6e27a;
+    border: 0;
+    border-radius: 6px;
+    padding: 0.7rem 1.1rem;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover,
+input[type="submit"]:focus-visible {
+    background-color: #ffe58a;
+}
+
+.back {
+    color: var(--navy);
+    font-weight: 700;
+}
+
+footer {
+    background-color: var(--navy);
+    color: #ffffff;
+    text-align: center;
+    padding: 1rem;
+}
+
+footer p {
+    margin: 0.2rem 0;
+}
