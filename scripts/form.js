@@ -35,6 +35,15 @@ products.forEach((product) => {
     productSelect.appendChild(option);
 });
 
+const installDate = document.querySelector("#installDate");
+
+if (installDate) {
+    const today = new Date();
+    const month = String(today.getMonth() + 1).padStart(2, "0");
+    const day = String(today.getDate()).padStart(2, "0");
+    installDate.max = `${today.getFullYear()}-${month}-${day}`;
+}
+
 const yearSpan = document.querySelector("#currentyear");
 const lastModified = document.querySelector("#lastModified");
 
