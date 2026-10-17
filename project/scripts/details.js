@@ -94,6 +94,9 @@ document.addEventListener("click", (event) => {
     if (event.target.id === "close-dialog") {
         detailDialog.close();
     }
+    if (event.target === detailDialog) {
+        detailDialog.close();
+    }
 });
 
 document.addEventListener("keydown", (event) => {
