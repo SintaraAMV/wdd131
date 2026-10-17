@@ -3,32 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Final Project Placeholder – Omar Lizandro Meza Ramirez</title>
-    <meta name="description" content="Placeholder page for the WDD 131 final project by Omar Lizandro Meza Ramirez.">
+    <title>Temple Paths - Home</title>
+    <meta name="description" content="Temple Paths is a worldwide Latter-day Saint temple travel guide with featured temples, a filterable album, and a visit planner.">
     <meta name="author" content="Omar Lizandro Meza Ramirez">
-    <link rel="stylesheet" href="../styles/base.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/templepaths.css">
+    <script src="scripts/shared.js" defer></script>
 </head>
 <body>
     <header>
-        <span id="course-title">WDD 131 – Dynamic Web Fundamentals</span>
-        <nav>
-            <a href="../index.html">Home</a>
-            <a href="https://byupw.instructure.com/">Canvas</a>
-            <a href="https://www.churchofjesuschrist.org/study/scriptures">Scripture</a>
-            <a href="./">Final Project</a>
+        <p class="site-title"><a href="index.html">Temple Paths</a></p>
+        <button id="menu" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">☰</button>
+        <nav id="primary-nav">
+            <a href="index.html" aria-current="page">Home</a>
+            <a href="temples.html">Temples</a>
+            <a href="visit.html">Plan a Visit</a>
         </nav>
     </header>
     <main>
-        <h1>Final Project</h1>
-        <section class="card">
-            <h2>Coming in Week 06</h2>
-            <p>This folder will hold the WDD 131 final website. The home page link points here so the navigation is ready now.</p>
-            <p><a href="../index.html">Return to the course home page</a>.</p>
+        <section class="hero">
+            <h1>Plan a temple visit, anywhere</h1>
+            <p>Temple Paths helps Latter-day Saint travelers compare temples by country, dedication year, and size, then save a visit plan in the browser.</p>
+            <p><a href="temples.html">Browse the album</a> or <a href="visit.html">plan a visit</a>.</p>
         </section>
+        <h2>Featured temples</h2>
+        <div class="grid three">
+            <figure class="temple-card">
+                <img src="../images/cordoba-argentina.webp" alt="Córdoba Argentina Temple" width="640" height="400" loading="lazy">
+                <figcaption>
+                    <h2>Córdoba Argentina</h2>
+                    <p>South America. Dedicated 2015.</p>
+                </figcaption>
+            </figure>
+            <figure class="temple-card">
+                <img src="../images/cardston-alberta.webp" alt="Cardston Alberta Temple" width="640" height="400" loading="lazy">
+                <figcaption>
+                    <h2>Cardston Alberta</h2>
+                    <p>North America. Dedicated 1923.</p>
+                </figcaption>
+            </figure>
+            <figure class="temple-card">
+                <img src="../images/auckland-new-zealand.webp" alt="Auckland New Zealand Temple" width="640" height="400" loading="lazy">
+                <figcaption>
+                    <h2>Auckland New Zealand</h2>
+                    <p>Oceania. A Pacific stop on a longer trip.</p>
+                </figcaption>
+            </figure>
+        </div>
     </main>
     <footer>
-        <p>&copy; <span id="currentyear">2026</span> Omar Lizandro Meza Ramirez · El Salvador</p>
-        <p id="lastModified">Placeholder page for the final project folder.</p>
+        <p>&copy; <span id="currentyear"></span> Omar Lizandro Meza Ramirez</p>
+        <p><a href="references.html">References</a></p>
+        <p id="lastModified"></p>
     </footer>
 </body>
 </html>

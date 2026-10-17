@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temple Paths - Plan a Visit</title>
+    <meta name="description" content="Save a planned Latter-day Saint temple visit with a date and notes. Plans stay in this browser with localStorage.">
+    <meta name="author" content="Omar Lizandro Meza Ramirez">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/templepaths.css">
+    <script src="scripts/shared.js" defer></script>
+    <script src="scripts/visit.js" defer></script>
+</head>
+<body>
+    <header>
+        <p class="site-title"><a href="index.html">Temple Paths</a></p>
+        <button id="menu" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">☰</button>
+        <nav id="primary-nav">
+            <a href="index.html">Home</a>
+            <a href="temples.html">Temples</a>
+            <a href="visit.html" aria-current="page">Plan a Visit</a>
+        </nav>
+    </header>
+    <main>
+        <h1>Plan a visit</h1>
+        <p class="lead">Choose a temple, pick a date, and add a note. The plan is saved in this browser.</p>
+        <form id="visit-form">
+            <label for="temple">Temple *</label>
+            <select id="temple" name="temple" required>
+                <option value="" disabled selected>*Select a temple ...*</option>
+                <option value="Córdoba Argentina">Córdoba Argentina</option>
+                <option value="Cardston Alberta">Cardston Alberta</option>
+                <option value="Brussels Belgium">Brussels Belgium</option>
+                <option value="Brasília Brazil">Brasília Brazil</option>
+                <option value="Bogotá Colombia">Bogotá Colombia</option>
+                <option value="Bern Switzerland">Bern Switzerland</option>
+                <option value="Auckland New Zealand">Auckland New Zealand</option>
+                <option value="Asunción Paraguay">Asunción Paraguay</option>
+                <option value="Adelaide Australia">Adelaide Australia</option>
+            </select>
+            <label for="visitDate">Visit date *</label>
+            <input type="date" id="visitDate" name="visitDate" required>
+            <label for="notes">Notes</label>
+            <textarea id="notes" name="notes" rows="4"></textarea>
+            <input type="submit" value="Save Visit Plan">
+        </form>
+        <section class="panel">
+            <h2>Saved plans</h2>
+            <div id="plans"></div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; <span id="currentyear"></span> Omar Lizandro Meza Ramirez</p>
+        <p><a href="references.html">References</a></p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
