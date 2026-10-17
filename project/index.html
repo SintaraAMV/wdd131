@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/templepaths.css">
     <script src="scripts/shared.js" defer></script>
+    <script src="scripts/details.js" defer></script>
 </head>
 <body>
     <header>
@@ -30,21 +31,21 @@
         </section>
         <h2>Featured temples</h2>
         <div class="grid three">
-            <figure class="temple-card">
+            <figure class="temple-card" data-name="Córdoba Argentina" tabindex="0">
                 <img src="../images/cordoba-argentina.webp" alt="Córdoba Argentina Temple" width="640" height="400" loading="lazy">
                 <figcaption>
                     <h2>Córdoba Argentina</h2>
                     <p>South America. Dedicated 2015.</p>
                 </figcaption>
             </figure>
-            <figure class="temple-card">
+            <figure class="temple-card" data-name="Cardston Alberta" tabindex="0">
                 <img src="../images/cardston-alberta.webp" alt="Cardston Alberta Temple" width="640" height="400" loading="lazy">
                 <figcaption>
                     <h2>Cardston Alberta</h2>
                     <p>North America. Dedicated 1923.</p>
                 </figcaption>
             </figure>
-            <figure class="temple-card">
+            <figure class="temple-card" data-name="Auckland New Zealand" tabindex="0">
                 <img src="../images/auckland-new-zealand.webp" alt="Auckland New Zealand Temple" width="640" height="400" loading="lazy">
                 <figcaption>
                     <h2>Auckland New Zealand</h2>
@@ -53,6 +54,15 @@
             </figure>
         </div>
     </main>
+    <dialog id="temple-dialog">
+        <img id="detail-image" alt="" width="640" height="400">
+        <div class="dialog-body">
+            <h2 id="detail-title"></h2>
+            <div id="detail-body"></div>
+            <a id="detail-plan" class="plan-link" href="visit.html">Plan a Visit</a>
+            <div><button id="close-dialog" type="button">Close</button></div>
+        </div>
+    </dialog>
     <footer>
         <p>&copy; <span id="currentyear"></span> Omar Lizandro Meza Ramirez</p>
         <p><a href="references.html">References</a></p>

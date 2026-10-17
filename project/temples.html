@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="styles/templepaths.css">
     <script src="scripts/shared.js" defer></script>
     <script src="scripts/temples.js" defer></script>
+    <script src="scripts/details.js" defer></script>
 </head>
 <body>
     <header>
@@ -36,6 +37,15 @@
         </div>
         <div id="album" class="grid three"></div>
     </main>
+    <dialog id="temple-dialog">
+        <img id="detail-image" alt="" width="640" height="400">
+        <div class="dialog-body">
+            <h2 id="detail-title"></h2>
+            <div id="detail-body"></div>
+            <a id="detail-plan" class="plan-link" href="visit.html">Plan a Visit</a>
+            <div><button id="close-dialog" type="button">Close</button></div>
+        </div>
+    </dialog>
     <footer>
         <p>&copy; <span id="currentyear"></span> Omar Lizandro Meza Ramirez</p>
         <p><a href="references.html">References</a></p>

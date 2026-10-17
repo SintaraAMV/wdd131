@@ -136,6 +136,14 @@ form,
 
 .temple-card {
     overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.temple-card:hover,
+.temple-card:focus-visible {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 18px rgb(16 42 67 / 18%);
 }
 
 .temple-card img {
@@ -243,6 +251,52 @@ footer a {
 
 footer p {
     margin: 0.25rem 0;
+}
+
+dialog {
+    width: min(34rem, calc(100% - 2rem));
+    border: 1px solid var(--line);
+    border-top: 4px solid var(--gold);
+    border-radius: 12px;
+    padding: 0;
+}
+
+dialog img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+}
+
+dialog .dialog-body {
+    padding: 1rem;
+}
+
+dialog h2 {
+    margin: 0 0 0.4rem;
+}
+
+.plan-link {
+    display: inline-block;
+    margin-top: 0.4rem;
+    font-weight: 700;
+    color: #102a43;
+    background-color: #f6e27a;
+    text-decoration: none;
+    border-radius: 6px;
+    padding: 0.6rem 0.9rem;
+}
+
+#close-dialog {
+    margin-top: 0.7rem;
+    font: inherit;
+    font-weight: 700;
+    color: #ffffff;
+    background-color: var(--navy);
+    border: 0;
+    border-radius: 6px;
+    padding: 0.55rem 0.85rem;
+    cursor: pointer;
 }
 
 @media screen and (min-width: 40rem) {

@@ -1,6 +1,21 @@
 const storageKey = "templePathsVisits";
 const form = document.querySelector("#visit-form");
 const plans = document.querySelector("#plans");
+const visitDate = document.querySelector("#visitDate");
+const templeSelect = document.querySelector("#temple");
+
+if (visitDate) {
+    const tomorrow = new Date();
+    tomorrow.setDate(tomorrow.getDate() + 1);
+    const month = String(tomorrow.getMonth() + 1).padStart(2, "0");
+    const day = String(tomorrow.getDate()).padStart(2, "0");
+    visitDate.min = `${tomorrow.getFullYear()}-${month}-${day}`;
+}
+
+const requestedTemple = new URLSearchParams(window.location.search).get("temple");
+if (requestedTemple && templeSelect) {
+    templeSelect.value = requestedTemple;
+}
 
 function readVisits() {
     const saved = localStorage.getItem(storageKey);

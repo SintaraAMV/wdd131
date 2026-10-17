@@ -6,7 +6,8 @@ const temples = [
         year: 2015,
         area: 34369,
         region: "americas",
-        image: "../images/cordoba-argentina.webp"
+        image: "../images/cordoba-argentina.webp",
+        description: "A modern temple in the city of Córdoba. It serves members across central Argentina and is a common stop for travelers already in the country."
     },
     {
         name: "Cardston Alberta",
@@ -15,7 +16,8 @@ const temples = [
         year: 1923,
         area: 88562,
         region: "americas",
-        image: "../images/cardston-alberta.webp"
+        image: "../images/cardston-alberta.webp",
+        description: "One of the oldest operating temples. The stone building in Cardston, Alberta, was dedicated in 1923 and is a historic stop in western Canada."
     },
     {
         name: "Brussels Belgium",
@@ -24,7 +26,8 @@ const temples = [
         year: 1994,
         area: 28000,
         region: "europe",
-        image: "../images/brussels-belgium.webp"
+        image: "../images/brussels-belgium.webp",
+        description: "The Brussels Belgium Temple serves members in Belgium and nearby countries. It is a compact European temple in the Brussels area."
     },
     {
         name: "Brasília Brazil",
@@ -33,7 +36,8 @@ const temples = [
         year: 2023,
         area: 25000,
         region: "americas",
-        image: "../images/brasilia-brazil.webp"
+        image: "../images/brasilia-brazil.webp",
+        description: "A newer temple in Brazil's capital. Brasília is a useful base for a visit because the city is well connected by air."
     },
     {
         name: "Bogotá Colombia",
@@ -42,7 +46,8 @@ const temples = [
         year: 1999,
         area: 53500,
         region: "americas",
-        image: "../images/bogota-colombia.webp"
+        image: "../images/bogota-colombia.webp",
+        description: "The Bogotá Colombia Temple sits in the capital and serves members across Colombia. Plan extra travel time in the city."
     },
     {
         name: "Bern Switzerland",
@@ -51,7 +56,8 @@ const temples = [
         year: 1955,
         area: 35546,
         region: "europe",
-        image: "../images/bern-switzerland.webp"
+        image: "../images/bern-switzerland.webp",
+        description: "Dedicated in 1955, the Bern Switzerland Temple was the first temple in Europe. It is in Münchenbuchsee, near Bern."
     },
     {
         name: "Auckland New Zealand",
@@ -60,7 +66,8 @@ const temples = [
         year: 2025,
         area: 45000,
         region: "oceania",
-        image: "../images/auckland-new-zealand.webp"
+        image: "../images/auckland-new-zealand.webp",
+        description: "A Pacific temple in Auckland. It is a practical stop for members traveling through New Zealand or the South Pacific."
     },
     {
         name: "Asunción Paraguay",
@@ -69,7 +76,8 @@ const temples = [
         year: 2002,
         area: 11906,
         region: "americas",
-        image: "../images/asuncion-paraguay.webp"
+        image: "../images/asuncion-paraguay.webp",
+        description: "The Asunción Paraguay Temple serves members in Paraguay. The city is the usual base for a visit."
     },
     {
         name: "Adelaide Australia",
@@ -78,7 +86,8 @@ const temples = [
         year: 2000,
         area: 10700,
         region: "oceania",
-        image: "../images/adelaide-australia.webp"
+        image: "../images/adelaide-australia.webp",
+        description: "The Adelaide Australia Temple is in Marden, near Adelaide. It is a smaller temple and a good stop in southern Australia."
     }
 ];
 
@@ -99,7 +108,7 @@ function matchesFilter(temple, filter) {
 }
 
 function createCard(temple) {
-    return `<figure class="temple-card">
+    return `<figure class="temple-card" data-name="${temple.name}" tabindex="0">
         <img src="${temple.image}" alt="${temple.name} Temple" width="640" height="400" loading="lazy">
         <figcaption>
             <h2>${temple.name}</h2>
